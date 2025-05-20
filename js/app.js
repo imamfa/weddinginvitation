@@ -32,6 +32,25 @@ jQuery(document).ready(function ($) {
     classPopularComment: CUI_WP.classPopularComment,
   };
 
+  // =============================
+// Open Invitation Modal Handler
+// =============================
+jQuery(document).ready(function($) {
+  // 1) Set background sampul
+  var sampulbg = $('.modalx').data('sampul');
+  $('.modalx').css('background-image',
+    'url(' + sampulbg + ') !important'
+  );
+  // 2) Kunci scroll halaman sampai tombol diklik
+  $('body').css('overflow', 'hidden');
+  // 3) Pasang listener tombol Open Invitation
+  $('#wdp-button-wrapper button').on('click', function() {
+    $('.modalx').addClass('removeModals');
+    $('body').css('overflow', 'auto');
+  });
+});
+
+
   //Remove duplicate comment box
   jQuery('.cui-wrap-comments').each(function (index, element) {
     var ids = jQuery('[id=\'' + this.id + '\']');
