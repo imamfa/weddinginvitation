@@ -1,14 +1,5 @@
  <script>
-      window._wpemojiSettings = {
-        "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/",
-        "ext": ".png",
-        "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/",
-        "svgExt": ".svg",
-        "source": {
-          "concatemoji": "https:\/\/bemybeyonce.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"
-        }
-      };
-      /*! This file is auto-generated */
+       /*! This file is auto-generated */
       ! function(i, n) {
         var o, s, e;
 
