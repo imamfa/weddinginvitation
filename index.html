@@ -2,7 +2,6 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/inline.css" />
     <meta name="robots" content="noindex, nofollow">
 
     <!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -218,7 +217,7 @@
                     }
 
                     function cleanIts(str) {
-                      return jQuery(" < textarea > < /textarea>").html(str.replace(/\\ / g, "")).text();
+                      return jQuery("<textarea></textarea>").html(str.replace(/\\ /g, "")).text();
                     }
                   </script>
                   <style type="text/css">
@@ -924,7 +923,7 @@
                       var temp = jQuery(" < textarea > ");
                         jQuery("body").append(temp); temp.val(content.replace(/ < br ? \/?>/g, "\n")).select(); document.execCommand("copy"); temp.remove();
                         var text = jQuery(el).html()
-                        jQuery(el).html(jQuery(el).data('message')) var counter = 0;
+                        jQuery(el).html(jQuery(el).data('message')); var counter = 0;
                         var interval = setInterval(function() {
                           counter++;
                           if (counter == 1) {
