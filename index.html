@@ -168,43 +168,6 @@
                     </div>
                   </div>
                   <script>
-                    var sampulbg = jQuery('.modalx').data('sampul');
-                    jQuery('.modalx').attr('style', 'background-image: url(' + sampulbg + ') !important;');
-                    jQuery('body').css('overflow', 'hidden');
-                    jQuery('.wdp-button-wrapper button').on('click', function() {
-                      jQuery('.modalx').addClass('removeModals');
-                      jQuery('body').css('overflow', 'auto');
-                    });
-                  </script>
-                  <script>
-                    //var z = document.querySelector('#wdp-button-wrapper');
-                    //z.addEventListener("click", function(event) {
-                    //Neo - Added New Conditional Statement for select Audio or Youtube
-                    var isYT = false;
-                    jQuery("#wdp-button-wrapper").on("click", "button", function() {
-                      // var isYT = false;
-                      playAudio();
-                      if (document.body.contains(document.getElementById("song"))) {
-                        document.getElementById("song").play();
-                        isYT = false;
-                      } else {
-                        isYT = true;
-                        player.playVideo();
-                      }
-
-                      function playAudio() {
-                        var isYT = false;
-                        if (document.body.contains(document.getElementById("song"))) {
-                          document.getElementById("song").play();
-                          isYT = false;
-                        } else {
-                          isYT = true;
-                          player.playVideo();
-                        }
-                      }
-                    });
-                  </script>
-                  <script>
                     // decode & and \'
                     if (jQuery('.namatamu').length >= 1) {
                       let tmpHtmlNamatamu = document.querySelectorAll('.namatamu')
@@ -1189,9 +1152,7 @@
         }
       };
     </script>
-
-
-    <script src="js/vendor.js" defer></script>
     <script src="js/app.js" defer></script>
+    <script src="js/vendor.js" defer></script>
   </body>
 </html>
