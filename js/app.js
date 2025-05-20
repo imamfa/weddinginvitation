@@ -32,24 +32,6 @@ jQuery(document).ready(function ($) {
     classPopularComment: CUI_WP.classPopularComment,
   };
 
-  // =============================
-// Open Invitation Modal Handler
-// =============================
-jQuery(document).ready(function($) {
-  // 1) Set background sampul
-  var sampulbg = $('.modalx').data('sampul');
-  $('.modalx').css('background-image',
-    'url(' + sampulbg + ') !important'
-  );
-  // 2) Kunci scroll halaman sampai tombol diklik
-  $('body').css('overflow', 'hidden');
-  // 3) Pasang listener tombol Open Invitation
-  $('#wdp-button-wrapper button').on('click', function() {
-    $('.modalx').addClass('removeModals');
-    $('body').css('overflow', 'auto');
-  });
-});
-
 
   //Remove duplicate comment box
   jQuery('.cui-wrap-comments').each(function (index, element) {
@@ -9398,3 +9380,28 @@ jQuery("document").ready(function($) {
         $(".guestbook-list").pagify(hal, ".user-guestbook");
     }
   });
+
+
+jQuery(document).ready(function($) {
+  console.log("✅ app.js loaded and document ready");     // (1)
+
+  // 1) Verifikasi elemen wrapper ada
+  var wrapper = $('.wdp-button-wrapper');
+  console.log("⤷ .wdp-button-wrapper count:", wrapper.length); // (2)
+  
+  // 2) Ambil tombol
+  var btn = wrapper.find('button');
+  console.log("⤷ tombol di dalam wrapper:", btn.length);       // (3)
+  
+  if (!btn.length) {
+    console.error("❌ Tombol Open Invitation tidak ditemukan!");
+    return;
+  }
+  
+  // 3) Pasang event listener
+  btn.on('click', function() {
+    console.log("🟢 Tombol diklik!");                         // (4)
+    $('.modalx').addClass('removeModals');
+    $('body').css('overflow', 'auto');
+  });
+});
