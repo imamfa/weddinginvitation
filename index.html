@@ -166,19 +166,19 @@
                     </div>
                   </div>
                   
-                  <script>
-                    // decode & and \'
-                    if (jQuery('.namatamu').length >= 1) {
-                      let tmpHtmlNamatamu = document.querySelectorAll('.namatamu')
-                      tmpHtmlNamatamu.forEach((tamuTexts) => {
-                        tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
-                      });
-                    }
+<script>
+  // decode & and \'
+  if (jQuery('.namatamu').length >= 1) {
+    let tmpHtmlNamatamu = document.querySelectorAll('.namatamu');
+    tmpHtmlNamatamu.forEach((tamuTexts) => {
+      tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
+    });
+  }
 
-                    function cleanIts(str) {
-                      return jQuery(" < textarea > < /textarea>").html(str.replace(/\\ / g, "")).text();
-                    }
-                  </script>
+  function cleanIts(str) {
+    return jQuery("<textarea></textarea>").html(str.replace(/\\/g, "")).text();
+  }
+</script>
                   <style type="text/css">
                     .elementor-button-qr {
                       display: inline-block;
