@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
-
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+  rel="stylesheet"
+/>
     <!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>Imam & Febrina</title>
     <meta name="description" content="Enjoy scrolling!">
@@ -586,53 +589,22 @@
           </div>
         </div>
       </section>
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-6c0f315 elementor-section-height-min-height elementor-section-items-bottom elementor-section-content-bottom elementor-section-boxed elementor-section-height-default" data-id="6c0f315" data-element_type="section" id="live" data-settings="{" background_background":"classic"}"="">
-        <div class="elementor-container elementor-column-gap-default">
-          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3a950e1" data-id="3a950e1" data-element_type="column" data-settings="{" background_background":"classic"}"="">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-background-overlay"></div>
-              <div class="elementor-element elementor-element-11bd031 elementor-widget elementor-widget-heading" data-id="11bd031" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">Live Streaming</h2>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-0014dd6 elementor-widget elementor-widget-text-editor" data-id="0014dd6" data-element_type="widget" data-widget_type="text-editor.default">
-                <div class="elementor-widget-container">
-                  <p>Kami berencana menyiarkan secara langsung acara pernikahan kami melalui platform Youtube dan Instagram yang dapat diakses melalui tombol dibawah ini</p>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-cc1c63b elementor-align-left elementor-widget elementor-widget-button" data-id="cc1c63b" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-icon">
-                          <i aria-hidden="true" class="fab fa-instagram"></i>
-                        </span>
-                        <span class="elementor-button-text">INSTAGRAM</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-b12f101 elementor-align-left elementor-widget elementor-widget-button" data-id="b12f101" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-icon">
-                          <i aria-hidden="true" class="fab fa-youtube"></i>
-                        </span>
-                        <span class="elementor-button-text">YOUTUBE</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- our-gallery start -->
+<section id="our-gallery" class="our-gallery-section" style="padding: 40px 0;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:20px;">OUR GALLERY</h2>
+    <div class="gallery-container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+      <!-- repeat this block for each image in your /images/ folder -->
+      <div class="gallery-item" style="flex:0 0 calc(25% - 10px);">
+        <a href="images/photo1.jpg" data-lightbox="our-gallery" data-title="Caption for Photo 1">
+          <img src="images/thumbs/photo1.jpg" alt="Photo 1" loading="lazy" style="width:100%; display:block; border-radius:4px;" />
+        </a>
+      </div>
+      <!-- end repeat -->
+    </div>
+  </div>
+</section>
+<!-- our-gallery end -->
       <section class="elementor-section elementor-top-section elementor-element elementor-element-483bd9f elementor-section-height-min-height elementor-section-content-bottom elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="483bd9f" data-element_type="section" data-settings="{" background_background":"classic"}"="">
         <div class="elementor-container elementor-column-gap-default">
           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0951bba" data-id="0951bba" data-element_type="column" data-settings="{" background_background":"classic"}"="">
@@ -1222,7 +1194,8 @@
     <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
     <script src="js/bdt-uikit.js" id="bdt-uikit-js"></script>
     <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
-    <script src="js/license.min.js" id="wdp-script-js"></script>
     <script src="js/guest-form.js" id="kirim-kit-js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
   </body>
 </html>
