@@ -2,6 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/inline.css" />
     <meta name="robots" content="noindex, nofollow">
 
     <!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -105,6 +106,11 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/app.css">
      <!-- JS -->  
+    <script src="js/init.js" defer></script> 
+    <script src="js/jquery.min.js" id="jquery-core-js"></script>
+    <script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&sensor=false" id="gmaps-js-js"></script>
+	  
     <meta name="format-detection" content="telephone=no">
     <meta name="generator" content="Elementor 3.28.4; features: additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-auto">
     <style>
@@ -165,20 +171,56 @@
                       </div>
                     </div>
                   </div>
-                  
-<script>
-  // decode & and \'
-  if (jQuery('.namatamu').length >= 1) {
-    let tmpHtmlNamatamu = document.querySelectorAll('.namatamu');
-    tmpHtmlNamatamu.forEach((tamuTexts) => {
-      tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
-    });
-  }
+                  <script>
+                    var sampulbg = jQuery('.modalx').data('sampul');
+                    jQuery('.modalx').attr('style', 'background-image: url(' + sampulbg + ') !important;');
+                    jQuery('body').css('overflow', 'hidden');
+                    jQuery('.wdp-button-wrapper button').on('click', function() {
+                      jQuery('.modalx').addClass('removeModals');
+                      jQuery('body').css('overflow', 'auto');
+                    });
+                  </script>
+                  <script>
+                    //var z = document.querySelector('#wdp-button-wrapper');
+                    //z.addEventListener("click", function(event) {
+                    //Neo - Added New Conditional Statement for select Audio or Youtube
+                    var isYT = false;
+                    jQuery("#wdp-button-wrapper").on("click", "button", function() {
+                      // var isYT = false;
+                      playAudio();
+                      if (document.body.contains(document.getElementById("song"))) {
+                        document.getElementById("song").play();
+                        isYT = false;
+                      } else {
+                        isYT = true;
+                        player.playVideo();
+                      }
 
-  function cleanIts(str) {
-    return jQuery("<textarea></textarea>").html(str.replace(/\\/g, "")).text();
-  }
-</script>
+                      function playAudio() {
+                        var isYT = false;
+                        if (document.body.contains(document.getElementById("song"))) {
+                          document.getElementById("song").play();
+                          isYT = false;
+                        } else {
+                          isYT = true;
+                          player.playVideo();
+                        }
+                      }
+                    });
+                  </script>
+                  <script>
+                    // decode & and \'
+                    if (jQuery('.namatamu').length >= 1) {
+                      let tmpHtmlNamatamu = document.querySelectorAll('.namatamu')
+                      tmpHtmlNamatamu.forEach((tamuTexts) => {
+                        tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
+                      });
+                    }
+
+                    function cleanIts(str) {
+                      return jQuery(" < textarea > < /textarea>").html(str.replace(/\\ / g, "")).text();
+                    }
+                  </script>
                   <style type="text/css">
                     .elementor-button-qr {
                       display: inline-block;
@@ -923,11 +965,39 @@
         document.addEventListener(event, lazyloadRunObserver);
       });
     </script>
+    <script src="js/core.min.js" id="jquery-ui-core-js"></script>
+    <script src="js/mouse.min.js" id="jquery-ui-mouse-js"></script>
+    <script src="js/slider.min.js" id="jquery-ui-slider-js"></script>
+    <script src="js/draggable.min.js" id="jquery-ui-draggable-js"></script>
+    <script src="js/jquery.ui.touch-punch.js" id="jquery-touch-punch-js"></script>
+    <script src="js/wdp-swiper.min.js" id="wdp-swiper-js-js"></script>
+    <script src="js/qr-code.js" id="weddingpress-qr-js"></script>
+    <script src="js/exad-scripts.min.js" id="exad-main-script-js"></script>
+    <script src="js/qr-code-styling.js" id="qr-code-styling-js"></script>
+    <script src="js/xlsx.full.min.js" id="kirimkit-js"></script>
+    <script src="js/cui_script.js" id="cui_js_script-js"></script>
+    <script src="js/jquery.jPages.min.js" id="cui_jPages-js"></script>
+    <script src="js/jquery.textareaCounter.js" id="cui_textCounter-js"></script>
+    <script src="js/jquery.placeholder.min.js" id="cui_placeholder-js"></script>
+    <script src="js/autosize.min.js" id="cui_autosize-js"></script>
+    <script src="js/hooks.min.js" id="wp-hooks-js"></script>
+    <script src="js/i18n.min.js" id="wp-i18n-js"></script>
     <script id="wp-i18n-js-after">
       wp.i18n.setLocaleData({
         'text direction\u0004ltr': ['ltr']
       });
     </script>
+    <script src="js/react.min.js" id="react-js"></script>
+    <script src="js/react-dom.min.js" id="react-dom-js"></script>
+    <script src="js/escape-html.min.js" id="wp-escape-html-js"></script>
+    <script src="js/element.min.js" id="wp-element-js"></script>
+    <script src="js/license.min.js" id="wdp-script-js"></script>
+    <script src="js/hello-frontend.min.js" id="hello-theme-frontend-js"></script>
+    <script src="js/swiper.min.js" id="swiper-js"></script>
+    <script src="js/e-gallery.min.js" id="elementor-gallery-js"></script>
+    <script src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
+    <script src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+    <script src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
     <script id="elementor-pro-frontend-js-before">
       var ElementorProFrontendConfig = {
         "ajaxurl": "https:\/\/bemybeyonce.com\/wp-admin\/admin-ajax.php",
@@ -1022,6 +1092,7 @@
         }
       };
     </script>
+    <script src="js/frontend.min.js" id="elementor-pro-frontend-js"></script>
     <script id="elementor-frontend-js-before">
       var elementorFrontendConfig = {
         "environmentMode": {
@@ -1133,7 +1204,7 @@
         "kit": {
           "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
           "global_image_lightbox": "yes",
-          "lightbox_enable_counter": "yes"
+          "lightbox_enable_counter": "yes",
           "lightbox_enable_fullscreen": "yes",
           "lightbox_enable_zoom": "yes",
           "lightbox_enable_share": "yes",
@@ -1151,11 +1222,10 @@
         }
       };
     </script>
-    <!-- Before anything that needs jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-..." crossorigin="anonymous" defer></script>
-
-    <script src="js/vendor.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <script src="js/frontend.min_1.js" id="elementor-frontend-js"></script>
+    <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
+    <script src="js/bdt-uikit.js" id="bdt-uikit-js"></script>
+    <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
+    <script src="js/guest-form.js" id="kirim-kit-js"></script>
   </body>
 </html>
