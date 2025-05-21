@@ -60,8 +60,8 @@
                         }, 200); // periksa setiap 200ms
                       }
                     });
-                  </script>
-                  <script>
+
+
                     // Ambil elemen audio dengan ID "song"
                     const audioElement = document.getElementById("song");
                     // Event listener untuk visibility change
