@@ -1,4 +1,3 @@
- <script>
                     jQuery(document).ready(function($) {
                       var startSeconds = '';
                       var endSeconds = 9999;
@@ -101,4 +100,3 @@
                         });
                       }
                     });
-                  </script>
