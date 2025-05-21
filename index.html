@@ -81,7 +81,7 @@
                         <div class="elementor-image img"></div>
                         <div class="wdp-txt-the-wedding" style="width:auto !important">The Wedding Of </div>
                         <div class="wdp-mempelai" style="width: auto !important;">Imam & Febrina</div>
-                        <div class="wdp-dear" style="width: auto !important;">Kepada Yth.:</div>
+                        <div class="wdp-dear" style="width: auto !important;">Kepada Yth:</div>
                         <div class="wdp-name namatamu" style="width: auto !important;">Tamu Undangan</div>
                         <div class="wdp-button-wrapper" id="wdp-button-wrapper">
                           <button class="elementor-button"> Open Invitation </button>
@@ -743,7 +743,8 @@
       <!--   <script src="js/e-gallery.min.js" id="elementor-gallery-js"></script> -->
       <script defer src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
       <script defer src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
-      <script defer src="js/frontend.min.js"          id="elementor-frontend-js"></script>
+<!--  🔥 Ini yang kerap terlupa 🔥 -->
+<script defer src="js/frontend.min.js" id="elementor-frontend-js"></script>
       <script defer src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
       <script defer src="js/e-gallery.min.js" id="elementor-gallery-js"></script>
       <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
@@ -751,5 +752,14 @@
       <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
       <script src="js/guest-form.js" id="kirim-kit-js"></script>
       <script>
+
+        <script>
+  if (window.elementorFrontend && typeof elementorFrontend.init === 'function') {
+    elementorFrontend.init();
+  } else {
+    console.warn('elementorFrontend belum siap:', window.elementorFrontend);
+  }
+</script>
+
   </body>
 </html>
