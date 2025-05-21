@@ -136,9 +136,10 @@
                       });
                     }
 
-                    function cleanIts(str) {
-                      return jQuery(" < textarea > < /textarea>").html(str.replace(/\\/g, "")).text();
-                      }
+function cleanIts(str) {
+  let cleanedStr = str.replace(/\\/g, "");
+  return jQuery("<textarea></textarea>").html(cleanedStr).text();
+}
                   </script>
                   <style type="text/css">
                     .elementor-button-qr {
