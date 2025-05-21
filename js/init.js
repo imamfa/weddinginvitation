@@ -6,3 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (typeof Eg === 'function') {
+    new Eg('.e-gallery', {
+      // opsi default, misal:
+      thumbnail: true,
+      lightbox: true
+    });
+  }
+});
+
