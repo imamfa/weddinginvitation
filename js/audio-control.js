@@ -11,22 +11,19 @@
                         $("#mute-sound").show();
                         if (audio) {
                           audio.currentTime = startTime;
-                          audio.play();
-                          isPlaying = true;
-                          monitorEndTime();
                         }
                       } else {
                         $("#unmute-sound").show();
                       }
                       $("#audio-container").click(function() {
                         if (e) {
-                          $("#mute-sound").hide();
-                          $("#unmute-sound").show();
+                          $("#mute-sound").show();
+                          $("#unmute-sound").hide();
                           pauseAudio();
                           e = false;
                         } else {
-                          $("#unmute-sound").hide();
-                          $("#mute-sound").show();
+                          $("#unmute-sound").show();
+                          $("#mute-sound").hide();
                           playAudio();
                           e = true;
                         }
@@ -92,11 +89,4 @@
                         }
                       }
                     });
-                    // Memastikan audio langsung diputar saat halaman dimuat
-                    window.addEventListener("load", () => {
-                      if (audioElement) {
-                        audioElement.play().catch((err) => {
-                          console.log("Error saat mencoba memutar audio saat halaman dimuat:", err);
-                        });
-                      }
-                    });
+                   
