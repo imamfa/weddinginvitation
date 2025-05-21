@@ -8,12 +8,12 @@
                       var isPlaying = false;
                       var endTimeInterval;
                       if (e) {
-                        $("#mute-sound").show();
+                        $("#unmute-sound").show();
                         if (audio) {
                           audio.currentTime = startTime;
                         }
                       } else {
-                        $("#unmute-sound").show();
+                        $("#mute-sound").show();
                       }
                       $("#audio-container").click(function() {
                         if (e) {
