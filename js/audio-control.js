@@ -77,6 +77,7 @@
                       } else if (document.visibilityState === "visible") {
                         // Play audio jika tab kembali aktif
                         if (audioElement && audioElement.paused) {
+                          $("#unmute-sound").show();
                           audioElement.play().catch((err) => {
                             console.log("Error saat mencoba memutar audio:", err);
                           });
