@@ -74,9 +74,7 @@
               <div class="elementor-element elementor-element-03a572a elementor-widget elementor-widget-weddingpress-wellcome" data-id="03a572a" data-element_type="widget" data-widget_type="weddingpress-wellcome.default">
                 <div class="elementor-widget-container">
                   <style>
-                    /* .elementor-widget-container {
-					all: unset!important;
-				} */
+                    /* .elementor-widget-container { all: unset!important; } */
                   </style>
                   <div class="modalx" data-sampul="">
                     <div class="overlayy"></div>
@@ -84,8 +82,8 @@
                       <div class="info_modalx">
                         <div class="elementor-image img"></div>
                         <div class="wdp-txt-the-wedding" style="width:auto !important">The Wedding Of </div>
-                        <div class="wdp-mempelai" style="width: auto !important;">Sindy & Albert </div>
-                        <div class="wdp-dear" style="width: auto !important;">Kepada Yth :</div>
+                        <div class="wdp-mempelai" style="width: auto !important;">Imam & Febrina</div>
+                        <div class="wdp-dear" style="width: auto !important;">Kepada Yth.:</div>
                         <div class="wdp-name namatamu" style="width: auto !important;">Tamu Undangan</div>
                         <div class="wdp-button-wrapper" id="wdp-button-wrapper">
                           <button class="elementor-button"> Open Invitation </button>
@@ -184,110 +182,9 @@
                       </div>
                     </div>
                   </div>
-                  <script>
-                    jQuery(document).ready(function($) {
-                      var startSeconds = '';
-                      var endSeconds = 9999;
-                      var e = window.settingAutoplay;
-                      var startTime = startSeconds; // detik mulai
-                      var endTime = endSeconds; // detik berhenti
-                      var audio = document.getElementById("song");
-                      var isPlaying = false;
-                      var endTimeInterval;
-                      if (e) {
-                        $("#mute-sound").show();
-                        if (audio) {
-                          audio.currentTime = startTime;
-                          audio.play();
-                          isPlaying = true;
-                          monitorEndTime();
-                        }
-                      } else {
-                        $("#unmute-sound").show();
-                      }
-                      $("#audio-container").click(function() {
-                        if (e) {
-                          $("#mute-sound").hide();
-                          $("#unmute-sound").show();
-                          pauseAudio();
-                          e = false;
-                        } else {
-                          $("#unmute-sound").hide();
-                          $("#mute-sound").show();
-                          playAudio();
-                          e = true;
-                        }
-                      });
-
-                      function playAudio() {
-                        if (audio) {
-                          audio.currentTime = startTime;
-                          audio.play();
-                          isPlaying = true;
-                          monitorEndTime();
-                        }
-                      }
-
-                      function pauseAudio() {
-                        if (audio) {
-                          audio.pause();
-                          isPlaying = false;
-                          clearInterval(endTimeInterval);
-                        }
-                      }
-
-                      function monitorEndTime() {
-                        clearInterval(endTimeInterval);
-                        endTimeInterval = setInterval(function() {
-                          if (audio && audio.currentTime >= endTime) {
-                            audio.pause();
-                            isPlaying = false;
-                            clearInterval(endTimeInterval);
-                          }
-                        }, 200); // periksa setiap 200ms
-                      }
-                    });
-                  </script>
-                  <script>
-                    // Ambil elemen audio dengan ID "song"
-                    const audioElement = document.getElementById("song");
-                    // Event listener untuk visibility change
-                    document.addEventListener("visibilitychange", () => {
-                      if (document.visibilityState === "hidden") {
-                        // Pause audio jika tab berpindah
-                        if (audioElement && !audioElement.paused) {
-                          audioElement.pause();
-                        }
-                        // Pause video YouTube jika tab berpindah
-                        if (typeof player !== "undefined" && player.getPlayerState) {
-                          if (player.getPlayerState() === YT.PlayerState.PLAYING || player.getPlayerState() === YT.PlayerState.BUFFERING) {
-                            player.pauseVideo();
-                          }
-                        }
-                      } else if (document.visibilityState === "visible") {
-                        // Play audio jika tab kembali aktif
-                        if (audioElement && audioElement.paused) {
-                          audioElement.play().catch((err) => {
-                            console.log("Error saat mencoba memutar audio:", err);
-                          });
-                        }
-                        // Play video YouTube jika tab kembali aktif
-                        if (typeof player !== "undefined" && player.getPlayerState) {
-                          if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
-                            player.playVideo();
-                          }
-                        }
-                      }
-                    });
-                    // Memastikan audio langsung diputar saat halaman dimuat
-                    window.addEventListener("load", () => {
-                      if (audioElement) {
-                        audioElement.play().catch((err) => {
-                          console.log("Error saat mencoba memutar audio saat halaman dimuat:", err);
-                        });
-                      }
-                    });
-                  </script>
+	         <!-- audio control -->
+                  <script defer src="js/audio-control.js"></script>
+			
                 </div>
               </div>
               <div class="elementor-element elementor-element-dd58d15 elementor-widget elementor-widget-heading" data-id="dd58d15" data-element_type="widget" data-widget_type="heading.default">
@@ -854,8 +751,6 @@
     <script src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
     <script src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
     <script src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
-    <script src="js/frontend.min.js" id="elementor-pro-frontend-js"></script>
-    <script src="js/frontend.min_1.js" id="elementor-frontend-js"></script>
     <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
     <script src="js/bdt-uikit.js" id="bdt-uikit-js"></script>
     <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
