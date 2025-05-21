@@ -10,56 +10,34 @@
 
 
 
-.gallery {
-  max-width: 1200px;
-  margin: 0 auto;
-  column-count: 4;
-  font-family: arial;
+ .c-1 {
+	 background: #1a535c;
+	 color: #ddd;
 }
-.gallery-item {
-  break-inside: avoid;
-  margin-bottom: 16px;
+ .c-2 {
+	 background: #4ecdc4;
 }
-.gallery-item figure {
-  margin: 0;
-  position: relative;
+ .c-3 {
+	 background: #bfd7ea;
 }
-.gallery-item figcaption {
-  font-style: italic;
-  padding: 8px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  box-sizing: border-box;
-  bottom: 3px;
-  color: #fff;
-  height: 30px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  border-radius: 0 0 14px 14px;
+ .c-4 {
+	 background: #ff6b6b;
 }
-.gallery-item img {
-  width: 100%;
-  border-radius: 14px;
+ .c-5 {
+	 background: #ffe66d;
 }
-.gallery-item p {
-  margin: 0;
-  padding: 8px;
+ .card {
+	 min-height: 100px;
+	 background-size: cover;
+	 background-position: 50% 50%;
 }
-
-@media screen and (max-width: 500px) {
-  .gallery {
-    column-count: 1;
-  }
+ .span-2 {
+	 grid-column-end: span 2;
+	 grid-row-end: span 2;
+	 min-height: 200px;
 }
-@media screen and (min-width: 501px) and (max-width: 700px) {
-  .gallery {
-    column-count: 2;
-  }
-}
-@media screen and (min-width: 701px) and (max-width: 900px) {
-  .gallery {
-    column-count: 3;
-  }
+ .span-3 {
+	 grid-column-end: span 3;
+	 grid-row-end: span 3;
+	 min-height: 400px;
 }
