@@ -547,51 +547,49 @@
       </section>
 
 
-<!-- Gallery Section -->
 <section class="elementor-section elementor-top-section elementor-element elementor-element-483bd9f elementor-section-height-min-height elementor-section-content-bottom elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="483bd9f" data-element_type="section" data-settings='{"background_background":"classic"}'>
   <div class="elementor-container elementor-column-gap-default">
     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0951bba" data-id="0951bba" data-element_type="column" data-settings='{"background_background":"classic"}'>
       <div id="photo-gallery" class="gallery">
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg" alt="Photo 1">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg">
           </a>
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg" alt="Photo 2">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg">
           </a>
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg" alt="Photo 3">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg">
           </a>
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg" alt="Photo 4">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg">
           </a>
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg" alt="Photo 5">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg">
           </a>
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" alt="Photo 6">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg">
           </a>
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg" data-lightbox="wedding-gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg" alt="Photo 7">
+          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg" data-lightbox="gallery">
+            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg">
           </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
       
     
@@ -750,5 +748,18 @@
       <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
       <script src="js/guest-form.js" id="kirim-kit-js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+      <style>
+  #photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+</style>
   </body>
 </html>
