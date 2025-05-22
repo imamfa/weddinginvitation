@@ -517,7 +517,7 @@
            </div>
         </div>
       </section>
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-4633442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4633442" data-element_type="section" id="footer" data-settings="{" background_background":"classic"}"="">
+      <section class="elementor-section elementor-top-section elementor-element elementor-element-4633442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" style="scroll-snap-align: start !important; height: auto !important; box-sizing: border-box;" data-id="4633442" data-element_type="section" id="footer" data-settings="{" background_background":"classic"}"="">
         <div class="elementor-background-overlay"></div>
         <div class="elementor-container elementor-column-gap-default">
           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-737e9c9" data-id="737e9c9" data-element_type="column">
@@ -595,84 +595,7 @@
       </section>
       <script type="speculationrules"> {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
     </script>
-      <div data-elementor-type="popup" data-elementor-id="27908" class="elementor elementor-27908 elementor-location-popup" data-elementor-settings="{" entrance_animation":"fadeinleft","exit_animation":"fadeinleft","entrance_animation_duration":{"unit":"px","size":1.2,"sizes":[]},"a11y_navigation":"yes","triggers":[],"timing":{"devices":"yes","devices_devices":["desktop","mobile","tablet"]}}"="" data-elementor-post-type="elementor_library">
-        <section class="elementor-section elementor-top-section elementor-element elementor-element-162ad9c elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="162ad9c" data-element_type="section">
-          <div class="elementor-container elementor-column-gap-default">
-            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8dc12f0" data-id="8dc12f0" data-element_type="column">
-              <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-7f43f91 elementor-widget elementor-widget-image" data-id="7f43f91" data-element_type="widget" data-widget_type="image.default">
-                  <div class="elementor-widget-container">
-                    <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg" title="" alt="" loading="lazy">
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-ddfd1ef elementor-widget elementor-widget-heading" data-id="ddfd1ef" data-element_type="widget" data-widget_type="heading.default">
-                  <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Wedding Gift</h2>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-c46a2f4 elementor-widget elementor-widget-text-editor" data-id="c46a2f4" data-element_type="widget" data-widget_type="text-editor.default">
-                  <div class="elementor-widget-container">
-                    <p>BCA (Bank Central Asia)</p>
-                    <p>12345678</p>
-                    <p>Beyonce</p>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-f03326f elementor-align-center elementor-widget elementor-widget-weddingpress-copy-text" data-id="f03326f" data-element_type="widget" data-widget_type="weddingpress-copy-text.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-image img"></div>
-                    <div class="head-title"></div>
-                    <div class="elementor-button-wrapper">
-                      <div class="copy-content spancontent" style="display: none;">12345678</div>
-                      <a style="cursor:pointer;" onclick="copyText(this)" data-message="Copied" class="elementor-button" role="button">
-                        <div class="elementor-button-content-wrapper">
-                          <span>
-                            <i aria-hidden="true" class="far fa-copy"></i>
-                          </span>
-                          <span class="elementor-button-text">Copy</span>
-                        </div>
-                      </a>
-                    </div>
-                    <style type="text/css">
-                      .spancontent {
-                        padding-bottom: 20px;
-                      }
-
-                      .copy-content {
-                        color: #6EC1E4;
-                        text-align: center;
-                      }
-
-                      .head-title {
-                        color: #6EC1E4;
-                        text-align: center;
-                      }
-                    </style>
-                    <script>
-                      function copyText(el) {
-                        var content = jQuery(el).siblings('div.copy-content').html()
-                        var temp = jQuery(" < textarea > ");
-                        jQuery("body").append(temp);
-                        temp.val(content.replace(/ < br ? \/?>/g, "\n")).select();
-                        document.execCommand("copy");
-                        temp.remove();
-                        var text = jQuery(el).html()
-                        jQuery(el).html(jQuery(el).data('message'));
-                        var counter = 0;
-                        var interval = setInterval(function() {
-                          counter++;
-                          if (counter == 1) {
-                            jQuery(el).html(text)
-                          }
-                        }, 500);
-                      }
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+     
       <script>
         const lazyloadRunObserver = () => {
           const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
