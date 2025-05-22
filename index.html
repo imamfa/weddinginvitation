@@ -405,21 +405,23 @@
                      
 
 <select id="dropdown">
-  <option value="8943599439" data-atasnama="Imam Fahrurrozi">BANK BCA</option>
-  <option value="12345678" data-atasnama="Febrina Rizki Karnia">BANK PERMATA</option>
+  <option value="8943599439" data-atasnama="Imam Fahrurrozi" data-logo="https://raw.githubusercontent.com/imamfa/weddinggift/refs/heads/main/BCA.png">BANK BCA</option>
+  <option value="12345678" data-atasnama="Febrina Rizki Karnia" data-logo="https://raw.githubusercontent.com/imamfa/weddinggift/refs/heads/main/Permata.png">BANK PERMATA</option>
 </select>
 <button id="copy-btn" onclick="copyDropdown()">Salin</button>
 
 <script>
   function copyDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    var idx = dropdown.selectedIndex;
-    var selectedValue = dropdown.options[idx].value;
-    var selectedBank = dropdown.options[idx].text;
-    var selectedAtas = dropdown.options[idx].dataset.atasnama;
+    const dropdown = document.getElementById("dropdown");
+    const idx = dropdown.selectedIndex;
+    const selectedOption = dropdown.options[idx];
+    const selectedValue = selectedOption.value;
+    const selectedBank = selectedOption.text;
+    const selectedAtas = selectedOption.dataset.atasnama;
+    const selectedLogo = selectedOption.dataset.logo;
 
     // Copy ke clipboard
-    var tmp = document.createElement("input");
+    const tmp = document.createElement("input");
     tmp.value = selectedValue;
     document.body.appendChild(tmp);
     tmp.select();
@@ -427,39 +429,51 @@
     document.body.removeChild(tmp);
 
     // Ubah teks tombol sementara
-    var copyBtn = document.getElementById("copy-btn");
-    var originalText = copyBtn.textContent;
+    const copyBtn = document.getElementById("copy-btn");
+    const originalText = copyBtn.textContent;
     copyBtn.textContent = "Tersalin!";
-    setTimeout(function () {
+    setTimeout(() => {
       copyBtn.textContent = originalText;
     }, 1000);
 
     // Tampilkan notifikasi custom
-    showCustomAlert(selectedBank, selectedAtas, selectedValue);
+    showCustomAlert(selectedBank, selectedAtas, selectedValue, selectedLogo);
   }
 
-  function showCustomAlert(bank, nama, norek) {
+  function showCustomAlert(bank, nama, norek, logo) {
     const alertBox = document.createElement("div");
     alertBox.style.position = "fixed";
     alertBox.style.top = "20px";
     alertBox.style.left = "50%";
     alertBox.style.transform = "translateX(-50%)";
     alertBox.style.background = "#fff";
-    alertBox.style.padding = "16px 24px";
+    alertBox.style.padding = "16px";
     alertBox.style.border = "1px solid #ccc";
-    alertBox.style.borderRadius = "8px";
+    alertBox.style.borderRadius = "12px";
     alertBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.1)";
     alertBox.style.zIndex = "9999";
     alertBox.style.fontFamily = "sans-serif";
-    alertBox.innerHTML = `<strong>${bank} (a.n ${nama}): ${norek}</strong><br>Nomor rekening berhasil disalin!`;
+    alertBox.style.textAlign = "center";
+
+    alertBox.innerHTML = `
+      <div style="display: flex; align-items: center; background: #f4f4f4; padding: 10px; border-radius: 8px; margin-bottom: 8px;">
+        <img src="${logo}" alt="${bank}" style="width: 32px; height: 32px; margin-right: 12px;" />
+        <div style="text-align: left;">
+          <div style="font-weight: bold; font-size: 16px;">${norek}</div>
+          <div style="font-size: 14px; color: #444;">a.n ${nama}</div>
+        </div>
+      </div>
+      <div style="font-size: 14px;">Nomor rekening berhasil disalin!</div>
+    `;
 
     document.body.appendChild(alertBox);
 
     setTimeout(() => {
       alertBox.remove();
-    }, 2500);
+    }, 3000);
   }
 </script>
+
 
 
 
@@ -585,8 +599,10 @@
           </div>
         </div>
         <div class="elementor-element elementor-element-custom-made-with-love elementor-widget elementor-widget-text-editor" data-id="made-with-love" data-element_type="widget" data-widget_type="text-editor.default">
-          <div class="elementor-widget-container" style="text-align: center; background: rgba(0, 0, 0, 0.4); padding: 12px 24px; border-radius: 8px; display: inline-block; margin: 0 auto; color: white; font-size: 16px;">
-            Made with <span style="color: red; font-size: 18px;">❤</span>
+          <div class="elementor-widget-container" style="width: 100%; display: flex; justify-content: center;">
+            <div style="background: rgba(0, 0, 0, 0.4); padding: 6px 16px; border-radius: 8px; color: white; font-size: 13px;">
+              Made with <span style="color: red; font-size: 15px;">❤</span>
+            </div>
           </div>
         </div>
         <div class="elementor-element elementor-element-d23afc1 elementor-widget elementor-widget-html" data-id="d23afc1" data-element_type="widget" data-widget_type="html.default">
@@ -608,6 +624,7 @@
     </div>
   </div>
 </section>
+
 
 
 
