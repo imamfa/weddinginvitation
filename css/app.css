@@ -14,6 +14,14 @@ body > .elementor {               /* atau wrapper apa pun yang scrollable */
   scroll-behavior: smooth;
 }
 
+/* 3) Tiap section Elementor full-height & snap di start */
+.elementor-section {
+  scroll-snap-align: start;
+  height: 100vh !important;
+  box-sizing: border-box;         /* agar padding tidak nambah tinggi */
+}
+/* === End Scroll-Snap === */
+
 
 
 
