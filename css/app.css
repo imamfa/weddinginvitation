@@ -6,6 +6,14 @@ html, body {
   overflow: hidden;               /* sembunyikan scroll default */
 }
 
+/* 2) Buat container utama bisa scroll dan aktifkan scroll-snap */
+body > .elementor {               /* atau wrapper apa pun yang scrollable */
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 /* 3) Tiap section Elementor full-height & snap di start */
 .elementor-section {
   scroll-snap-align: start;
