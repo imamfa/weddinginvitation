@@ -404,9 +404,10 @@
                     <div class="container">
                      
 
+                      
 <select id="dropdown">
   <option value="8943599439" data-atasnama="Imam Fahrurrozi" data-logo="https://raw.githubusercontent.com/imamfa/weddinggift/refs/heads/main/BCA.png">BANK BCA</option>
-  <option value="12345678" data-atasnama="Febrina Rizki Karnia" data-logo="https://raw.githubusercontent.com/imamfa/weddinggift/refs/heads/main/PERMATA.PNG">BANK PERMATA</option>
+  <option value="12345678" data-atasnama="Febrina Rizki Karnia" data-logo="https://raw.githubusercontent.com/imamfa/weddinggift/refs/heads/main/Permata.png">BANK PERMATA</option>
 </select>
 <button id="copy-btn" onclick="copyDropdown()">Salin</button>
 
@@ -447,25 +448,23 @@
     alertBox.style.left = "50%";
     alertBox.style.transform = "translateX(-50%)";
     alertBox.style.background = "#fff";
-    alertBox.style.padding = "12px 16px";
+    alertBox.style.padding = "16px";
     alertBox.style.border = "1px solid #ccc";
     alertBox.style.borderRadius = "12px";
     alertBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.1)";
     alertBox.style.zIndex = "9999";
     alertBox.style.fontFamily = "sans-serif";
     alertBox.style.textAlign = "center";
-    alertBox.style.maxWidth = "320px";
-    alertBox.style.width = "90%";
 
     alertBox.innerHTML = `
-      <div style="display: flex; align-items: center; background: #f4f4f4; padding: 8px; border-radius: 8px; margin-bottom: 8px;">
-        <img src="${logo}" alt="${bank}" style="width: 32px; height: 32px; margin-right: 12px;" />
+      <div style="display: flex; align-items: center; background: #f4f4f4; padding: 10px; border-radius: 8px; margin-bottom: 8px;">
+        <img src="${logo}" alt="${bank}" style="width: 31px; height: 31px; margin-right: 12px;" />
         <div style="text-align: left;">
-          <div style="font-weight: bold; font-size: 14px;">${norek}</div>
-          <div style="font-size: 13px; color: #444;">a.n ${nama}</div>
+          <div style="font-weight: bold; font-size: 16px;">${norek}</div>
+          <div style="font-size: 12px; color: #444;">a.n ${nama}</div>
         </div>
       </div>
-      <div style="font-size: 13px;">Nomor rekening berhasil disalin!</div>
+      <div style="font-size: 12px;">Nomor rekening berhasil disalin!</div>
     `;
 
     document.body.appendChild(alertBox);
@@ -474,7 +473,7 @@
       alertBox.remove();
     }, 3000);
   }
-</script
+</script>
 
 
 
