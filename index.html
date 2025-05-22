@@ -505,6 +505,8 @@
       <section class="elementor-section elementor-top-section elementor-element elementor-element-483bd9f elementor-section-height-min-height elementor-section-content-bottom elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="483bd9f" data-element_type="section" data-settings='{"background_background":"classic"}'>
         <div class="elementor-container elementor-column-gap-default">
           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0951bba" data-id="0951bba" data-element_type="column" data-settings='{"background_background":"classic"}'>
+            
+            <!--
             <div id="photo-gallery" class="gallery">
               <div class="gallery-item">
                 <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-10.jpg">
@@ -531,6 +533,59 @@
                 <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-10.jpg">
               </div>
             </div>
+            -->
+
+
+            <section id="photo-gallery" class="gallery">
+  <!-- Ganti url thumbnail dan highres sesuai file kamu -->
+  <div class="gallery-item">
+    <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-10.jpg" data-highres="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-10.jpg" alt="Foto Pernikahan 1">
+  </div>
+  <div class="gallery-item">
+    <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4" data-highres="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4" alt="Foto Pernikahan 2">
+  </div>
+  <div class="gallery-item">
+    <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" data-highres="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" alt="Foto Pernikahan 3">
+  </div>
+  <div class="gallery-item">
+    <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5" data-highres="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5" alt="Foto Pernikahan 4">
+  </div>
+  <!-- Tambahkan lebih banyak .gallery-item di sini -->
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <button class="close-btn" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+<script>
+  // Buka lightbox dan load high-res image
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      const highResSrc = img.dataset.highres;
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = highResSrc;
+      document.getElementById('lightbox').classList.add('active');
+    });
+  });
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.getElementById('lightbox-img').src = '';
+  }
+
+  // Tutup jika klik di luar gambar
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target.id === 'lightbox') closeLightbox();
+  });
+</script>
+
+
+
+
+            
+            
            </div>
         </div>
       </section>
