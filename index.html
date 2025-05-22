@@ -409,18 +409,25 @@
                       <button id="copy-btn" onclick="copyDropdown()">Salin</button>
                     </div>
                     <script>
-                      function copyDropdown() {
-                        var dropdown = document.getElementById("dropdown");
-                        var selectedOption = dropdown.options[dropdown.selectedIndex].value;
-                        var tempInput = document.createElement("input");
-                        tempInput.value = selectedOption;
-                        document.body.appendChild(tempInput);
-                        tempInput.select();
-                        document.execCommand("copy");
-                        document.body.removeChild(tempInput);
-                        alert("Rekening berhasil disalin: " + selectedOption);
-                      }
-                    </script>
+  function copyDropdown() {
+    var dropdown = document.getElementById("dropdown");
+    var selectedIndex = dropdown.selectedIndex;
+    var selectedValue = dropdown.options[selectedIndex].value;   // nomor rekening
+    var selectedText = dropdown.options[selectedIndex].text;     // e.g. "BANK BCA (a.n xxxxx)"
+
+    // Buat elemen input sementara untuk copy ke clipboard
+    var tempInput = document.createElement("input");
+    tempInput.value = selectedValue;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    // Tampilkan notifikasi dengan nama bank + nomor
+    alert("Rekening " + selectedText + ": " + selectedValue + " berhasil disalin!");
+  }
+</script>
+
                     <style>
                       .container {
                         display: flex;
