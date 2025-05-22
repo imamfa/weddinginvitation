@@ -430,25 +430,37 @@
     var copyBtn = document.getElementById("copy-btn");
     var originalText = copyBtn.textContent;
     copyBtn.textContent = "Tersalin!";
-    setTimeout(function() {
+    setTimeout(function () {
       copyBtn.textContent = originalText;
-    }, 1000); // 1 detik
+    }, 1000);
 
-    // Tampilkan notifikasi dengan teks tebal menggunakan alert dengan innerHTML dalam dialog custom
-    var message = `**${selectedBank} (a.n ${selectedAtas}): ${selectedValue}**\nRekening berhasil disalin!`;
+    // Tampilkan notifikasi custom
     showCustomAlert(selectedBank, selectedAtas, selectedValue);
   }
 
   function showCustomAlert(bank, nama, norek) {
-    const message = document.createElement("div");
-    message.innerHTML = `<div style="font-family: sans-serif; padding: 16px; border: 1px solid #ccc; background: #f9f9f9; max-width: 400px; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-      <strong>${bank} (a.n ${nama}): ${norek}</strong><br>
-      Nomor rekening berhasil disalin!
-    </div>`;
-    document.body.appendChild(message);
-    setTimeout(() => message.remove(), 2500); // hilang dalam 2.5 detik
+    const alertBox = document.createElement("div");
+    alertBox.style.position = "fixed";
+    alertBox.style.top = "20px";
+    alertBox.style.left = "50%";
+    alertBox.style.transform = "translateX(-50%)";
+    alertBox.style.background = "#fff";
+    alertBox.style.padding = "16px 24px";
+    alertBox.style.border = "1px solid #ccc";
+    alertBox.style.borderRadius = "8px";
+    alertBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.1)";
+    alertBox.style.zIndex = "9999";
+    alertBox.style.fontFamily = "sans-serif";
+    alertBox.innerHTML = `<strong>${bank} (a.n ${nama}): ${norek}</strong><br>Nomor rekening berhasil disalin!`;
+
+    document.body.appendChild(alertBox);
+
+    setTimeout(() => {
+      alertBox.remove();
+    }, 2500);
   }
 </script>
+
 
 
                     <style>
@@ -552,82 +564,55 @@
            </div>
         </div>
       </section>
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-4633442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" style="scroll-snap-align: start !important; height: auto !important; box-sizing: border-box;" data-id="4633442" data-element_type="section" id="footer" data-settings="{" background_background":"classic"}"="">
-        <div class="elementor-background-overlay"></div>
-        <div class="elementor-container elementor-column-gap-default">
-          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-737e9c9" data-id="737e9c9" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-22ae994 elementor-widget elementor-widget-heading" data-id="22ae994" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">Terima Kasih...</h2>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-f323994 elementor-widget elementor-widget-text-editor" data-id="f323994" data-element_type="widget" data-widget_type="text-editor.default">
-                <div class="elementor-widget-container">
-                  <p>Merupakan sebuah kehormatan dan kebahagiaan bagi Kami jika Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu bagi Kami</p>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-ec921e6 elementor-widget elementor-widget-spacer" data-id="ec921e6" data-element_type="widget" data-widget_type="spacer.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-spacer">
-                    <div class="elementor-spacer-inner"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-e0c2f59 elementor-widget elementor-widget-image" data-id="e0c2f59" data-element_type="widget" data-widget_type="image.default">
-                <div class="elementor-widget-container">
-                  <img fetchpriority="high" decoding="async" width="800" height="800" src="images/Logo-Beyonce-White-1024x1024.png" class="attachment-large size-large wp-image-44524" alt="" srcset="images/Logo-Beyonce-White-1024x1024.png 1024w, images/Logo-Beyonce-White-e1700930500235-150x150.png 150w, images/Logo-Beyonce-White-768x768.png 768w" sizes="(max-width: 800px) 100vw, 800px">
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-0f6be81 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget elementor-widget-icon-list" data-id="0f6be81" data-element_type="widget" data-widget_type="icon-list.default">
-                <div class="elementor-widget-container">
-                  <ul class="elementor-icon-list-items elementor-inline-items">
-                    <li class="elementor-icon-list-item elementor-inline-item">
-                      <a href="https://wa.me/6281774117221">
-                        <span class="elementor-icon-list-icon">
-                          <i aria-hidden="true" class="fab fa-whatsapp"></i>
-                        </span>
-                        <span class="elementor-icon-list-text">WhatsApp</span>
-                      </a>
-                    </li>
-                    <li class="elementor-icon-list-item elementor-inline-item">
-                      <a href="http://instagram.com/bemybeyonce.id">
-                        <span class="elementor-icon-list-icon">
-                          <i aria-hidden="true" class="fab fa-instagram"></i>
-                        </span>
-                        <span class="elementor-icon-list-text">Instagram</span>
-                      </a>
-                    </li>
-                    <li class="elementor-icon-list-item elementor-inline-item">
-                      <a href="http://bemybeyonce.com">
-                        <span class="elementor-icon-list-icon">
-                          <i aria-hidden="true" class="fas fa-globe"></i>
-                        </span>
-                        <span class="elementor-icon-list-text">Website</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="elementor-element elementor-element-d23afc1 elementor-widget elementor-widget-html" data-id="d23afc1" data-element_type="widget" data-widget_type="html.default">
-                <div class="elementor-widget-container">
-                  <style>
-                    html {
-                      scroll-snap-type: y mandatory;
-                    }
-
-                    .child {
-                      scroll scroll-snap-align: start;
-                      height: 100vh;
-                      scroll-snap-stop: always;
-                    }
-                  </style>
-                </div>
-              </div>
+      
+<section class="elementor-section elementor-top-section elementor-element elementor-element-4633442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" style="scroll-snap-align: start !important; height: auto !important; box-sizing: border-box;" data-id="4633442" data-element_type="section" id="footer">
+  <div class="elementor-background-overlay"></div>
+  <div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-737e9c9" data-id="737e9c9" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-22ae994 elementor-widget elementor-widget-heading" data-id="22ae994" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container">
+            <h2 class="elementor-heading-title elementor-size-default">Terima Kasih...</h2>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-f323994 elementor-widget elementor-widget-text-editor" data-id="f323994" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <p>Merupakan sebuah kehormatan dan kebahagiaan bagi Kami jika Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu bagi Kami</p>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-ec921e6 elementor-widget elementor-widget-spacer" data-id="ec921e6" data-element_type="widget" data-widget_type="spacer.default">
+          <div class="elementor-widget-container">
+            <div class="elementor-spacer">
+              <div class="elementor-spacer-inner"></div>
             </div>
           </div>
         </div>
-      </section>
+        <div class="elementor-element elementor-element-custom-footer-text elementor-widget elementor-widget-text-editor" data-id="custom-footer" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container" style="text-align: center; font-family: 'Courier New', monospace; color: #666; font-size: 14px;">
+            <p style="margin-top: 20px;">Made with <span style="color: red; font-size: 16px;">&#10084;&#65039;</span></p>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-d23afc1 elementor-widget elementor-widget-html" data-id="d23afc1" data-element_type="widget" data-widget_type="html.default">
+          <div class="elementor-widget-container">
+            <style>
+              html {
+                scroll-snap-type: y mandatory;
+              }
+              .child {
+                scroll-snap-align: start;
+                height: 100vh;
+                scroll-snap-stop: always;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      
       <script type="speculationrules"> {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
     </script>
      
