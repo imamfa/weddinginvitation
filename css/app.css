@@ -1,26 +1,3 @@
-/* === Scroll-Snap Full-Section === */
-/* 1) Pastikan root bisa scroll dan set height */
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;               /* sembunyikan scroll default */
-}
-
-/* 2) Buat container utama bisa scroll dan aktifkan scroll-snap */
-body > .elementor {               /* atau wrapper apa pun yang scrollable */
-  height: 100%;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-/* 3) Tiap section Elementor full-height & snap di start */
-.elementor-section {
-  scroll-snap-align: start;
-  height: 100vh !important;
-  box-sizing: border-box;         /* agar padding tidak nambah tinggi */
-}
-/* === End Scroll-Snap === */
 
 
 
