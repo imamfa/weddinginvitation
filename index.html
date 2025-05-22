@@ -28,12 +28,45 @@
     <link rel="stylesheet" href="css/elementor.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <!-- JS -->
     <script src="js/init.js" defer></script>
     <script src="js/jquery.min.js" id="jquery-core-js"></script>
     <meta name="format-detection" content="telephone=no">
     <meta name="generator" content="Elementor 3.28.4; features: additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-auto">
+    <style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery-item img:hover {
+    transform: scale(1.02);
+  }
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0 10px;
+  }
+  .nav-btn:hover {
+    color: #ccc;
+  }
+</style>
+
     <style>
       .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
       .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
@@ -552,44 +585,39 @@
     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0951bba" data-id="0951bba" data-element_type="column" data-settings='{"background_background":"classic"}'>
       <div id="photo-gallery" class="gallery">
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-1.jpg">
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-2.jpg">
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-3.jpg">
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-4.jpg">
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-5.jpg">
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-6.jpg">
         </div>
         <div class="gallery-item">
-          <a href="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg" data-lightbox="gallery">
-            <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg">
-          </a>
+          <img src="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg" data-full="https://ns-attachment.com/wp-content/uploads/2024/08/Kadhana-Sarah-7.jpg">
         </div>
       </div>
     </div>
   </div>
 </section>
+
+      <!-- Modal viewer -->
+<div id="image-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+  <button id="close-modal" style="position:absolute; top:20px; right:20px; font-size:32px; background:none; border:none; color:#fff; cursor:pointer">&times;</button>
+  <button id="prev-image" class="nav-btn" style="left:20px;">&#10094;</button>
+  <img id="modal-img" src="" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5); transition: all 0.3s ease;" />
+  <button id="next-image" class="nav-btn" style="right:20px;">&#10095;</button>
+</div>
+
 
       
     
@@ -747,19 +775,44 @@
       <script src="js/bdt-uikit.js" id="bdt-uikit-js"></script>
       <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
       <script src="js/guest-form.js" id="kirim-kit-js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-      <style>
-  #photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+    <script>
+  const galleryImages = document.querySelectorAll('#photo-gallery .gallery-item img');
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const prevBtn = document.getElementById('prev-image');
+  const nextBtn = document.getElementById('next-image');
+  const closeBtn = document.getElementById('close-modal');
+  let currentIndex = 0;
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.getAttribute('data-full');
+      currentIndex = index;
+    });
+  });
+
+  function showImage(index) {
+    if (index >= 0 && index < galleryImages.length) {
+      modalImg.src = galleryImages[index].getAttribute('data-full');
+      currentIndex = index;
+    }
   }
-  .gallery-item img {
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-</style>
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+</script>
+
   </body>
 </html>
