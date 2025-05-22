@@ -404,20 +404,19 @@
                     <div class="container">
                      
 
-                      <!-- di index.html, ubah <option> jadi seperti ini -->
 <select id="dropdown">
   <option value="8943599439" data-atasnama="Imam Fahrurrozi">BANK BCA</option>
-  <option value="12345678"    data-atasnama="Febrina Rizki Karnia">BANK PERMATA</option>
+  <option value="12345678" data-atasnama="Febrina Rizki Karnia">BANK PERMATA</option>
 </select>
 <button id="copy-btn" onclick="copyDropdown()">Salin</button>
 
 <script>
   function copyDropdown() {
-    var dropdown       = document.getElementById("dropdown");
-    var idx            = dropdown.selectedIndex;
-    var selectedValue  = dropdown.options[idx].value;            // nomor rekening
-    var selectedBank   = dropdown.options[idx].text;             // “BANK BCA” atau “BANK PERMATA”
-    var selectedAtas   = dropdown.options[idx].dataset.atasnama; // “Nama Pemilik BCA”, dst.
+    var dropdown = document.getElementById("dropdown");
+    var idx = dropdown.selectedIndex;
+    var selectedValue = dropdown.options[idx].value;
+    var selectedBank = dropdown.options[idx].text;
+    var selectedAtas = dropdown.options[idx].dataset.atasnama;
 
     // Copy ke clipboard
     var tmp = document.createElement("input");
@@ -427,13 +426,27 @@
     document.execCommand("copy");
     document.body.removeChild(tmp);
 
-    // Tampilkan notifikasi
-    alert(
-      "Rekening " + selectedBank +
-      " a.n. " + selectedAtas + ": " +
-      selectedValue + 
-      " berhasil disalin!"
-    );
+    // Ubah teks tombol sementara
+    var copyBtn = document.getElementById("copy-btn");
+    var originalText = copyBtn.textContent;
+    copyBtn.textContent = "Tersalin!";
+    setTimeout(function() {
+      copyBtn.textContent = originalText;
+    }, 1000); // 1 detik
+
+    // Tampilkan notifikasi dengan teks tebal menggunakan alert dengan innerHTML dalam dialog custom
+    var message = `**${selectedBank} (a.n ${selectedAtas}): ${selectedValue}**\nRekening berhasil disalin!`;
+    showCustomAlert(selectedBank, selectedAtas, selectedValue);
+  }
+
+  function showCustomAlert(bank, nama, norek) {
+    const message = document.createElement("div");
+    message.innerHTML = `<div style="font-family: sans-serif; padding: 16px; border: 1px solid #ccc; background: #f9f9f9; max-width: 400px; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+      <strong>${bank} (a.n ${nama}): ${norek}</strong><br>
+      Nomor rekening berhasil disalin!
+    </div>`;
+    document.body.appendChild(message);
+    setTimeout(() => message.remove(), 2500); // hilang dalam 2.5 detik
   }
 </script>
 
