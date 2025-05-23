@@ -107,22 +107,23 @@ select:focus {
 
 #dropdown {
   display: inline-block;
-  vertical-align: middle;          /* sejajar dengan tombol */
+  vertical-align: middle;          /* sejajar dengan tombol Salin */
   font-family: 'Poppins', sans-serif;
-  font-size: 0.875rem;             /* 14px, sama seperti tombol */
+  font-weight: 600;                /* bold */
+  font-size: 0.875rem;             /* 14px */
   line-height: 1.4;
-  padding: 0.4rem 0.8rem;          /* sama seperti tombol */
+  padding: 0.4rem 0.8rem;          /* sama dengan tombol Salin */
   background-color: transparent;   /* transparan */
-  color: inherit;                  /* wariskan warna teks dari konteks */
-  border: none;                    /* tanpa border */
-  border-radius: 0;                /* jika tombol punya radius, bisa samakan */
+  color: #ffffff;                  /* teks putih */
+  border: 1px solid #ffffff;       /* border putih */
+  border-radius: 0.5rem;           /* sama seperti tombol, 8px */
   cursor: pointer;
 }
 
-#dropdown:focus,
-#dropdown:hover {
-    outline: 0;
-    border-color: #888
+#dropdown:hover,
+#dropdown:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.8);
 }
 
 #copy-btn,
