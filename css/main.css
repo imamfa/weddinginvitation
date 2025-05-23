@@ -42,6 +42,63 @@
     transform: translateY(-50%) scale(0.9);
   }
 
+                      .container {
+                        display: flex;
+                      }
+
+                      #Dropdown {
+                        float: left;
+                        color: #000;
+                      }
+
+                      select {
+                        border-radius: 0px;
+                        font-family: 'suis'
+                          font-weight: bold;
+                        font-size: 11px;
+                        width: 70%;
+                        height: 30px;
+                        border-color: #ffff;
+                        color: #fff;
+                        background-color: #0001;
+                      }
+
+                      select:focus {
+                        outline: none;
+                        border-color: #C9C5C0;
+                      }
+
+                      #copy-btn {
+                        margin-left: 10px;
+                        border: none;
+                        float: right;
+                        border-radius: px !important;
+                        font-family: 'suis'
+                          font-weight: bold;
+                        font-size: 10px;
+                        height: 30px;
+                        border-color: #ffff;
+                        color: #ffff;
+                        width: 28%;
+                        background-color: black;
+                      }
+
+                      #copy-btn:hover {
+                        border-radius: 0px;
+                        font-family: 'suis'
+                          font-weight: bold;
+                        font-size: 11px;
+                        height: 30px;
+                        border-color: #C9C5C0;
+                        color: #ffff;
+                        background-color: black;
+                      }
+
+                      #copy-btn:focus {
+                        outline: none;
+                      }
+
+
 
 .fa,
 .fab,
