@@ -1,3 +1,48 @@
+ .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery-item img:hover {
+    transform: scale(1.02);
+  }
+  .modal-close, .modal-prev, .modal-next {
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    user-select: none;
+    transition: transform 0.1s;
+  }
+  .modal-close {
+    right: 30px;
+  }
+  .modal-prev {
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .modal-next {
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .modal-prev.clicked, .modal-next.clicked {
+    transform: translateY(-50%) scale(0.9);
+  }
+
+
 .fa,
 .fab,
 .fad,
