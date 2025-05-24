@@ -4295,33 +4295,3 @@ ul {
     width: 22px
 }
 
-
-
-
-
-
-/* =============================
-   Blue overlay untuk Wedding Event
-   ============================= */
-
-/* 1. Section utama (ID: 6f0a830) */
-.elementor-53545 
-  .elementor-element.elementor-element-6f0a830
-  > .elementor-background-overlay {
-    /* Hapus gradien lama */
-    background-image: none !important;
-    /* Ganti jadi blue semi-transparan */
-    background-color: #242424 !important;
-    /* Atur opacity jika perlu */
-    opacity: 1 !important;
-}
-
-/* 2. Box isi (column-populated ID: f47fafa) */
-.elementor-53545 
-  .elementor-element.elementor-element-f47fafa
-  > .elementor-element-populated
-  > .elementor-background-overlay {
-    background-image: none !important;
-    background-color: #242424 !important;
-    opacity: 1 !important;
-}
