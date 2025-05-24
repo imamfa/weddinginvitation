@@ -1,29 +1,17 @@
 /* Styling estetik untuk tombol Add to Google Calendar */
 .calendar-google-btn {
-  /* Buat sudut sangat bulat */
-  border-radius: 30px !important;
-
-  /* Warna semi-transparan agar bg section tetap terlihat */
-  /* Pilihan putih transparan di atas foto/warna gelap */
+  font-size: 0.85rem !important;        
+  padding: 0.4em 0.8em !important;      
+  border-radius: 25px !important;      
   background-color: rgba(255, 255, 255, 0.2) !important;
   color: #fff !important;
-
-  /* Border halus supaya tombol lebih “pop” */
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
-
-  /* Tambah sedikit blur di belakang (bila didukung) */
   backdrop-filter: blur(5px);
-
-  /* Spasi dalam yang nyaman */
-  padding: 0.6em 1.4em !important;
-
-  /* Pastikan teks dan icon terpusat */
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.4em;
 }
 
-/* Kalau sectionmu terang, bisa invert: */
 .section-light .calendar-google-btn {
   background-color: rgba(0, 0, 0, 0.2) !important;
   border: 1px solid rgba(0, 0, 0, 0.3) !important;
@@ -32,8 +20,8 @@
 
 /* Hover effect halus */
 .calendar-google-btn:hover {
-  background-color: rgba(255, 255, 255, 0.35) !important;
-  border-color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
   text-decoration: none;
 }
 
