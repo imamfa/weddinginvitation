@@ -1,3 +1,12 @@
+/* === override untuk geser teks ke 3/4 bagian bawah === */
+#header .content-modalx {
+  /* posisikan 75% dari atas viewport */
+  top: 75vh !important;
+  /* shift ke atas setengah tinggi elemen agar center-nya tepat di 75% */
+  transform: translateY(-50%) !important;
+}
+
+
 /* Styling estetik untuk tombol Add to Google Calendar */
 .calendar-google-btn {
   font-size: 0.85rem !important;        
