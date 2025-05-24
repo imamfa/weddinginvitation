@@ -1,29 +1,33 @@
 @media (max-width: 768px) {
-  /* 1) Container penuh untuk relatif positioning */
+  /* 1) Ubah content-modalx jadi flex container penuh viewport */
   #header .content-modalx {
-    position: relative !important;
-    top: 0 !important;
-    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;                /* override top:10px default */ 
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;         /* penuh layar mobile */ 
+    display: flex !important;         /* aktifkan flex layout */ 
+    flex-direction: column !important;
+    padding-top: 60vh !important;     /* dorong teks ke 60% dari atas */ 
+    padding-bottom: 25vh !important;  /* sisakan ruang 25% untuk tombol di bawah */
+    box-sizing: border-box !important;
     overflow: visible !important;
   }
 
-  /* 2) Posisikan teks di 60vh */
+  /* 2) Pastikan teks (“The Wedding Of…”) muncul di awal flex container */
   #header .info_modalx {
-    position: absolute !important;
-    top: 60vh !important;       /* 60% dari viewport */
-    left: 50% !important;        /* center secara horizontal */
-    transform: translateX(-50%) !important;
-    z-index: 1000 !important;
+    order: 1 !important;
+    justify-content: flex-start !important; /* teks tidak lagi center vertical */ 
+    text-align: center !important;
   }
 
-  /* 3) Posisikan tombol di 25vh dari bawah */
+  /* 3) Tempatkan tombol di akhir container, di ruang padding-bottom */
   #wdp-button-wrapper {
-    position: absolute !important;
-    bottom: 25vh !important;     /* 25% dari bawah viewport */
-    left: 50% !important;        /* center horisontal */
-    transform: translateX(-50%) !important;
-    display: block !important;   /* pastikan visible */
-    z-index: 1001 !important;
+    order: 2 !important;
+    margin-top: auto !important;       /* dorong ke bawah flex container */ 
+    display: flex !important;
+    justify-content: center !important;
+    z-index: 2003 !important;          /* pastikan di atas overlay */ 
   }
 }
 
