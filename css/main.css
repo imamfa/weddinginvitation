@@ -1,24 +1,29 @@
 @media (max-width: 768px) {
-  /* 1) Ukuran container penuh layar, agar padding bekerja */
+  /* 1) Container penuh untuk relatif positioning */
   #header .content-modalx {
+    position: relative !important;
     top: 0 !important;
-    height: 100vh !important;   /* override top:10px dan height:100% :contentReference[oaicite:0]{index=0} */
+    height: 100vh !important;
+    overflow: visible !important;
   }
 
-  /* 2) Padding atas & bawah 25vh */
+  /* 2) Posisikan teks di 60vh */
   #header .info_modalx {
-    display: flex;               /* pastikan flex layout */
-    flex-direction: column;
-    padding-top: 50vh;           /* naikkan teks 25% viewport */
-    padding-bottom: 25vh;        /* turunkan area tombol 25% viewport */
-    justify-content: flex-start; /* biarkan konten dimulai dari padding-top */
-    height: 100%;                /* agar padding-bottom dihitung terhadap full container */
+    position: absolute !important;
+    top: 60vh !important;       /* 60% dari viewport */
+    left: 50% !important;        /* center secara horizontal */
+    transform: translateX(-50%) !important;
+    z-index: 1000 !important;
   }
 
-  /* 3) Push tombol ke bawah area padding */
+  /* 3) Posisikan tombol di 25vh dari bawah */
   #wdp-button-wrapper {
-    margin-top: auto !important; /* dorong wrapper tombol ke paling bawah flex container */
-    text-align: center;          /* pastikan tetap center */
+    position: absolute !important;
+    bottom: 25vh !important;     /* 25% dari bawah viewport */
+    left: 50% !important;        /* center horisontal */
+    transform: translateX(-50%) !important;
+    display: block !important;   /* pastikan visible */
+    z-index: 1001 !important;
   }
 }
 
