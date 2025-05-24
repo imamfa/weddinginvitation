@@ -1,3 +1,29 @@
+@media (max-width: 768px) {
+  /* 1) Ukuran container penuh layar, agar padding bekerja */
+  #header .content-modalx {
+    top: 0 !important;
+    height: 100vh !important;   /* override top:10px dan height:100% :contentReference[oaicite:0]{index=0} */
+  }
+
+  /* 2) Padding atas & bawah 25vh */
+  #header .info_modalx {
+    display: flex;               /* pastikan flex layout */
+    flex-direction: column;
+    padding-top: 25vh;           /* naikkan teks 25% viewport */
+    padding-bottom: 25vh;        /* turunkan area tombol 25% viewport */
+    justify-content: flex-start; /* biarkan konten dimulai dari padding-top */
+    height: 100%;                /* agar padding-bottom dihitung terhadap full container */
+  }
+
+  /* 3) Push tombol ke bawah area padding */
+  #wdp-button-wrapper {
+    margin-top: auto !important; /* dorong wrapper tombol ke paling bawah flex container */
+    text-align: center;          /* pastikan tetap center */
+  }
+}
+
+
+
 /* Styling estetik untuk tombol Add to Google Calendar */
 .calendar-google-btn {
   font-size: 0.85rem !important;        
