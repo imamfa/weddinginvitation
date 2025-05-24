@@ -1,22 +1,3 @@
-/* === Override untuk mobile (max-width: 768px) === */
-@media (max-width: 768px) {
-  /* 1) Paksa teks muncul pada 75% dari viewport */
-  #header .content-modalx {
-    top: 75vh !important;               /* ganti posisi default top:10px */ 
-    transform: translateY(-50%) !important;
-  }
-
-  /* 2) Pastikan tombol "Open Invitation" tetap tampil */
-  #wdp-button-wrapper {
-    display: flex !important;           /* pastikan tidak tersembunyi */
-    position: relative !important;      /* agar z-index bisa diterapkan */
-    z-index: 2003 !important;           /* lebih tinggi dari .modalx dan .overlayy */
-    justify-content: center !important; /* rata-tengah */
-    margin-top: 1rem !important;        /* beri sedikit jarak atas jika perlu */
-  }
-}
-
-
 /* Styling estetik untuk tombol Add to Google Calendar */
 .calendar-google-btn {
   font-size: 0.85rem !important;        
