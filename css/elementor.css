@@ -2266,7 +2266,7 @@ button:not(:disabled) {
 .elementor-53545 .elementor-element.elementor-element-67d3107>.elementor-element-populated>.elementor-background-overlay,
 .elementor-53545 .elementor-element.elementor-element-bce6271>.elementor-element-populated>.elementor-background-overlay {
     background-color: #fff0;
-    background-image: linear-gradient(260deg, #ffffff00 73%, #242424d0 100%);
+    background-image: linear-gradient(260deg, #ffffff00 53%, #242424d0 100%);
     opacity: .5;
     transition: background .3s, border-radius .3s, opacity .3s
 }
@@ -2625,7 +2625,7 @@ body .elementor-53545 .elementor-element.elementor-element-496e160 .elementor-la
 
 .elementor-53545 .elementor-element.elementor-element-6f0a830>.elementor-background-overlay {
     background-color: #111;
-    opacity: .73;
+    opacity: .5;
     transition: background .3s, border-radius .3s, opacity .3s
 }
 
@@ -3145,7 +3145,7 @@ body {
         background-size: cover
     }
     .elementor-53545 .elementor-element.elementor-element-f47fafa>.elementor-element-populated>.elementor-background-overlay {
-        opacity: .83
+        opacity: .53
     }
     .elementor-53545 .elementor-element.elementor-element-f47fafa>.elementor-element-populated {
         margin: 30px;
