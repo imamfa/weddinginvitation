@@ -1937,7 +1937,7 @@ button:not(:disabled) {
 
 .elementor-element.elementor-button-warning .elementor-button,
 .elementor-widget-button .elementor-button .elementor-button-warning {
-    background-color: #f0ad4e
+    background-color: #242424
 }
 
 .elementor-element.elementor-button-danger .elementor-button,
@@ -2066,7 +2066,7 @@ button:not(:disabled) {
 }
 
 .elementor-kit-5 e-page-transition {
-    background-color: #ffbc7d
+    background-color: #242424
 }
 
 .elementor-section.elementor-section-boxed>.elementor-container {
@@ -2266,7 +2266,7 @@ button:not(:disabled) {
 .elementor-53545 .elementor-element.elementor-element-67d3107>.elementor-element-populated>.elementor-background-overlay,
 .elementor-53545 .elementor-element.elementor-element-bce6271>.elementor-element-populated>.elementor-background-overlay {
     background-color: #fff0;
-    background-image: linear-gradient(260deg, #fffFFF00 53%, #ff8f00 100%);
+    background-image: linear-gradient(260deg, #fffFFF00 53%, #70d640d0 100%);
     opacity: .5;
     transition: background .3s, border-radius .3s, opacity .3s
 }
