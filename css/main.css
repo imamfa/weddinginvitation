@@ -9,7 +9,7 @@
   #header .info_modalx {
     display: flex;               /* pastikan flex layout */
     flex-direction: column;
-    padding-top: 75vh;           /* naikkan teks 25% viewport */
+    padding-top: 50vh;           /* naikkan teks 25% viewport */
     padding-bottom: 25vh;        /* turunkan area tombol 25% viewport */
     justify-content: flex-start; /* biarkan konten dimulai dari padding-top */
     height: 100%;                /* agar padding-bottom dihitung terhadap full container */
