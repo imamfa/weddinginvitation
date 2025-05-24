@@ -4311,7 +4311,7 @@ ul {
     /* Hapus gradien lama */
     background-image: none !important;
     /* Ganti jadi blue semi-transparan */
-    background-color: rgba(30, 144, 255, 0.25) !important;
+    background-color: #242424 !important;
     /* Atur opacity jika perlu */
     opacity: 1 !important;
 }
@@ -4322,6 +4322,6 @@ ul {
   > .elementor-element-populated
   > .elementor-background-overlay {
     background-image: none !important;
-    background-color: rgba(30, 144, 255, 0.25) !important;
+    background-color: #242424 !important;
     opacity: 1 !important;
 }
