@@ -1,36 +1,3 @@
-@media (max-width: 768px) {
-  /* 1) Ubah content-modalx jadi flex container penuh viewport */
-  #header .content-modalx {
-    position: fixed !important;
-    top: 0 !important;                /* override top:10px default */ 
-    left: 0 !important;
-    width: 100% !important;
-    height: 100vh !important;         /* penuh layar mobile */ 
-    display: flex !important;         /* aktifkan flex layout */ 
-    flex-direction: column !important;
-    padding-top: 60vh !important;     /* dorong teks ke 60% dari atas */ 
-    padding-bottom: 25vh !important;  /* sisakan ruang 25% untuk tombol di bawah */
-    box-sizing: border-box !important;
-    overflow: visible !important;
-  }
-
-  /* 2) Pastikan teks (“The Wedding Of…”) muncul di awal flex container */
-  #header .info_modalx {
-    order: 1 !important;
-    justify-content: flex-start !important; /* teks tidak lagi center vertical */ 
-    text-align: center !important;
-  }
-
-  /* 3) Tempatkan tombol di akhir container, di ruang padding-bottom */
-  #wdp-button-wrapper {
-    order: 2 !important;
-    margin-top: auto !important;       /* dorong ke bawah flex container */ 
-    display: flex !important;
-    justify-content: center !important;
-    z-index: 2003 !important;          /* pastikan di atas overlay */ 
-  }
-}
-
 
 
 /* Styling estetik untuk tombol Add to Google Calendar */
