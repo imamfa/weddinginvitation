@@ -454,7 +454,7 @@ body>.elementor {
 
 /* ===== Lock ke Mobile Viewport ===== */
 html, body {
-  max-width: 430px;     /* lebar desain mobile kamu */
+  max-width: 375px;     /* lebar desain mobile kamu */
   margin: 0 auto;       /* center di layar desktop */
   overflow-x: hidden;   /* sembunyikan scroll horizontal */
 }
