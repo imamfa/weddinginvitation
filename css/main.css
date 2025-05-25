@@ -446,7 +446,7 @@ body>.elementor {
         column-count: 2
     }
     .info_modalx {
-    margin-top: -130px;   /* negatif = naik, posisitif = turunkan */
+    margin-top: -120px;   /* negatif = naik, posisitif = turunkan */
   }
 }
 
@@ -455,6 +455,16 @@ body>.elementor {
         column-count: 2
     }
     .info_modalx {
-    margin-top: -130px;   /* negatif = naik, posisitif = turunkan */
+    margin-top: -120px;   /* negatif = naik, posisitif = turunkan */
   }
+}
+
+.wdp-dear {
+  margin-bottom: 0.25rem !important;  /* atur sesuai kebutuhan, nilai default mungkin lebih besar */
+  padding-bottom: 0 !important;       /* kalau ada padding bawah */
+}
+
+.wdp-name.namatamu {
+  margin-top: 0.25rem !important;      /* atur sendiri—bisa pakai 0 jika mau nempel */
+  padding-top: 0 !important;           /* kalau ada padding atas */
 }
