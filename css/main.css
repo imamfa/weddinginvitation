@@ -445,6 +445,9 @@ body>.elementor {
     .gallery {
         column-count: 2
     }
+    .wdp-txt-the-wedding {
+    margin-top: -20px;   /* negatif = naik, posisitif = turunkan */
+  }
 }
 
 @media (max-width:480px) {
