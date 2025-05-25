@@ -1,3 +1,9 @@
+/* ===== Lock ke Mobile Viewport ===== */
+html, body {
+  max-width: 375px;     /* lebar desain mobile kamu */
+  margin: 0 auto;       /* center di layar desktop */
+  overflow-x: hidden;   /* sembunyikan scroll horizontal */
+}
 
 
 /* Styling estetik untuk tombol Add to Google Calendar */
@@ -451,10 +457,3 @@ body>.elementor {
     .gallery {
         column-count: 2
     }
-
-/* ===== Lock ke Mobile Viewport ===== */
-html, body {
-  max-width: 375px;     /* lebar desain mobile kamu */
-  margin: 0 auto;       /* center di layar desktop */
-  overflow-x: hidden;   /* sembunyikan scroll horizontal */
-}
