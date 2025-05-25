@@ -452,3 +452,8 @@ body>.elementor {
         column-count: 2
     }
 }
+@media (max-width: 768px) {
+  .content-modalx {
+    top: 25vh !important;
+  }
+}
