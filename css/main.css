@@ -439,13 +439,13 @@ body>.elementor {
 
 @media (max-width:1024px) {
     .gallery {
-        column-count: 3
+        column-count: 4
     }
 }
 
 @media (max-width:768px) {
     .gallery {
-        column-count: 2
+        column-count: 3
     }
     .info_modalx {
     margin-top: -100px;   /* negatif = naik, posisitif = turunkan */
@@ -454,7 +454,7 @@ body>.elementor {
 
 @media (max-width:480px) {
     .gallery {
-        column-count: 2
+        column-count: 3
     }
     .info_modalx {
     margin-top: -100px;   /* negatif = naik, posisitif = turunkan */
