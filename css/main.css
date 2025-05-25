@@ -453,11 +453,17 @@ body>.elementor {
     }
 
 
-html, body {
-  width: 430px !important;
-  min-width: 430px !important;
-  max-width: 430px !important;
-  margin: 0 auto !important;
-  overflow-x: hidden !important;
+/* ===== Lock ke Mobile lalu Scale buat Desktop ===== */
+@media (min-width: 430px) {
+  html {
+    width: 430px !important;
+    overflow: hidden !important;
+  }
+  body {
+    /* tetap 375px, tapi di‐scale agar muat desktop */
+    width: 430px !important;
+    transform-origin: top center !important;
+    transform: scale(calc(100vw / 430)) !important;
+    overflow-x: hidden !important;
+  }
 }
-
