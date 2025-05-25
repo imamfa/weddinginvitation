@@ -661,6 +661,24 @@
                 setTimeout(() => prevBtn.classList.remove('clicked'), 150);
               });
         </script>
+        <script>
+            // Ambil parameter 'name' dari URL
+            function getParam(name) {
+                const params = new URLSearchParams(window.location.search);
+                return params.get(name);
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                const guest = getParam('name');
+                if (!guest) return;  // kalau nggak ada param, biarkan default
+                // Decoding URL-encoded string (spasi jadi '+', special chars, dll)
+                const decoded = decodeURIComponent(guest.replace(/\+/g, ' '));
+                // Ganti semua elemen dengan class 'namatamu'
+                document.querySelectorAll('.namatamu').forEach(el => {
+                    el.textContent = decoded;
+                });
+            });
+</script>
+
 
 </body>
 
