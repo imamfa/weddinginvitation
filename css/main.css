@@ -58,14 +58,19 @@
     display: grid;
     /*grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));*/
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px
+    gap: 8px 8px;
+    column-count: 4;
+    column-gap: 8px;
+    padding: 16px
 }
 
 .gallery-item img {
     height: auto;
     object-fit: cover;
     cursor: pointer;
-    transition: transform .2s
+    transition: transform .2s;
+    width: 100%;
+    display: block
 }
 
 .gallery-item img:hover {
@@ -426,22 +431,13 @@ body>.elementor {
     bottom: 0
 }
 
-.gallery {
-    column-count: 4;
-    column-gap: 8px;
-    padding: 16px
-}
-
 .gallery-item {
     break-inside: avoid;
     margin-bottom: 8px;
     overflow: hidden
 }
 
-.gallery-item img {
-    width: 100%;
-    display: block
-}
+
 
 @media (max-width:1024px) {
     .gallery {
