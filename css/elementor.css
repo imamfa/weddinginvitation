@@ -2266,8 +2266,8 @@ button:not(:disabled) {
 .elementor-53545 .elementor-element.elementor-element-67d3107>.elementor-element-populated>.elementor-background-overlay,
 .elementor-53545 .elementor-element.elementor-element-bce6271>.elementor-element-populated>.elementor-background-overlay {
     background-color: #fff0;
-    background-image: linear-gradient(260deg, #ffffff00 60%, #ffffffaa 75% #242424d0 100%);
-    opacity: .5;
+    background-image: linear-gradient(260deg, #ffffff00 53%, 75% #242424d0 100%);
+    opacity: .70;
     transition: background .3s, border-radius .3s, opacity .3s
 }
 
