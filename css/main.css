@@ -460,21 +460,3 @@ body>.elementor {
     margin-top: -100px;   /* negatif = naik, posisitif = turunkan */
   }
 }
-
-.elementor-button {
-  /* Copy dari .calendar-google-btn, tapi lebih gelap */
-  background-color: #222 !important;        /* gelap hampir hitam */
-  color: #fff !important;                   /* teks putih */
-  border: 1px solid #444 !important;        /* border sedikit terang */
-  border-radius: 0.5rem !important;         /* sudut membulat */
-  padding: 0.75rem 1.5rem !important;       /* ruang dalam tombol */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important; /* bayangan kuat */
-  transition: background-color 0.3s !important;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-}
-
-.elementor-button:hover {
-  background-color: #111 !important;        /* hover lebih gelap */
-}
