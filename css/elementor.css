@@ -2821,7 +2821,8 @@ body:not(.rtl) .elementor-53545 .elementor-element.elementor-element-d0d19b1 .el
 
 .elementor-53545 .elementor-element.elementor-element-4633442:not(.elementor-motion-effects-element-type-background),
 .elementor-53545 .elementor-element.elementor-element-4633442>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url(../images/thanks.webp)
+    background-image: url(../images/thanks.webp);
+    background-position: center center;
     background-size: cover
 }
 
