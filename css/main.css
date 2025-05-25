@@ -452,3 +452,18 @@ body>.elementor {
         column-count: 2
     }
 
+/* ==== LOCK LAYOUT AT EXACTLY 480px ==== */
+@media (min-width: 481px) {
+  /* 1) Bungkus elemen utama agar bisa diskalakan */
+  body > .elementor {
+    width: 480px !important;              /* tetap 480px */
+    transform-origin: top center !important;
+    transform: scale(calc(100vw / 480)) !important;  /* skala sesuai lebar layar */
+    margin: 0 auto !important;            /* center di desktop */
+    overflow: visible !important;         /* biar isi bisa scroll */
+  }
+  /* 2) Sembunyikan scroll bar horizontal */
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
