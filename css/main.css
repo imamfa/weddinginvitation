@@ -465,6 +465,7 @@ body>.elementor {
   .elementor-column-wrap,
   .elementor-widget-wrap,
   .gallery-item,
+  .elementor-background-overlay,
   /* (tambahkan selector lain sesuai kebutuhan) */
   .calendar-google-btn,
   #copy-btn {
