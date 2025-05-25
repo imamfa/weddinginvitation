@@ -451,16 +451,10 @@ body>.elementor {
     .gallery {
         column-count: 2
     }
-}
-@media (max-width: 768px) {
-  .content-modalx {
-    top: 25vh !important;
-  }
-}
 
 /* ===== Lock ke Mobile Viewport ===== */
 html, body {
-  max-width: 375px;     /* lebar desain mobile kamu */
+  max-width: 430px;     /* lebar desain mobile kamu */
   margin: 0 auto;       /* center di layar desktop */
   overflow-x: hidden;   /* sembunyikan scroll horizontal */
 }
