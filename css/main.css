@@ -451,3 +451,23 @@ body>.elementor {
     .gallery {
         column-count: 2
     }
+
+
+/* === Restore rounded corners pada desktop (≥768px) === */
+@media (min-width: 768px) {
+  /* Override variable border-radius untuk section boxed */
+  :root {
+    --border-radius: 0.5rem !important;
+  }
+
+  /* Pastikan semua box generik mengikuti border-radius ini */
+  .elementor-section.elementor-section-boxed,
+  .elementor-column-wrap,
+  .elementor-widget-wrap,
+  .gallery-item,
+  /* (tambahkan selector lain sesuai kebutuhan) */
+  .calendar-google-btn,
+  #copy-btn {
+    border-radius: var(--border-radius) !important;
+  }
+}
