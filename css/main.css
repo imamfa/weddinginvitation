@@ -452,18 +452,24 @@ body>.elementor {
         column-count: 2
     }
 
-/* ==== LOCK LAYOUT AT EXACTLY 480px ==== */
+/* === LOCK LAYOUT AT EXACTLY 480px & SCALE FOR LARGER SCREENS === */
 @media (min-width: 481px) {
-  /* 1) Bungkus elemen utama agar bisa diskalakan */
-  body > .elementor {
-    width: 480px !important;              /* tetap 480px */
-    transform-origin: top center !important;
-    transform: scale(calc(100vw / 480)) !important;  /* skala sesuai lebar layar */
-    margin: 0 auto !important;            /* center di desktop */
-    overflow: visible !important;         /* biar isi bisa scroll */
-  }
-  /* 2) Sembunyikan scroll bar horizontal */
+  /* sembunyikan scroll horizontal */
   html, body {
     overflow-x: hidden !important;
+  }
+
+  /* target wrapper utama Elementor (child langsung body) */
+  body > div[data-elementor-type="wp-page"] {
+    /* Tetap canvas 480px */
+    width: 480px !important;
+    margin: 0 auto !important;
+
+    /* Scale canvas agar memenuhi lebar desktop */
+    transform-origin: top center !important;
+    transform: scale(calc(100vw / 480)) !important;
+
+    /* Fallback untuk browser yang mendukung zoom */
+    zoom: calc(100vw / 480) !important;
   }
 }
