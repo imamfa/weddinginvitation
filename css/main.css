@@ -445,8 +445,8 @@ body>.elementor {
     .gallery {
         column-count: 2
     }
-    .wdp-txt-the-wedding {
-    margin-top: -100px;   /* negatif = naik, posisitif = turunkan */
+    .info_modalx {
+    margin-top: -150px;   /* negatif = naik, posisitif = turunkan */
   }
 }
 
@@ -454,3 +454,7 @@ body>.elementor {
     .gallery {
         column-count: 2
     }
+    .info_modalx {
+    margin-top: -150px;   /* negatif = naik, posisitif = turunkan */
+  }
+}
