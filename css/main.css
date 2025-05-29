@@ -511,3 +511,19 @@ body>.elementor {
     background-size: auto 100%;
   }
 }
+
+/* ================================ 
+   Instant override: paksa background
+   section Wedding tampil di ≥768px
+   ================================ */
+@media (min-width: 768px) {
+  /* Target section-nya berdasarkan id="wedding" */
+  #wedding > .elementor-background-overlay {
+    /* ganti URL ini dengan background aslimu */
+    background: url('images/event.webp') center/cover no-repeat !important;
+    /* jika perlu warna saja: 
+       background-color: rgba(255,255,255,0.9) !important;
+    */
+    opacity: 1 !important;      /* pastikan overlay tidak transparan penuh */
+  }
+}
