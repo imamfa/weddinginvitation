@@ -464,21 +464,28 @@ body>.elementor {
 }
 
 
-/* lock lebar ke 480px dan center */
-.lock-480 {
-  width: 100vw;           /* penuhi viewport width */
-  max-width: 480px;       /* tapi tidak lebih dari 480px */
-  margin-left: auto;      
-  margin-right: auto;     /* center horisontal */
-  overflow-x: hidden;     /* sembunyikan overflow */
-  box-sizing: border-box; /* padding dan border masuk perhitungan width */
+/* 1) Biar container fluid di bawah 480px */
+.site-container {
+  width: 100%;
+  box-sizing: border-box; /* agar padding nggak nambah lebar */
+  margin: 0 auto;
 }
 
-/* untuk safety, pastikan html & body tidak melebihi */
-html, body {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0;
-  overflow-x: hidden;
+/* 2) Kalau layar lebih besar dari 480px, kunci ke 480px dan center */
+@media (min-width: 481px) {
+  .site-container {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
+}
+
+/* 3) Pastikan html/body juga nggak melebihi saat besar */
+@media (min-width: 481px) {
+  html, body {
+    max-width: 480px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
 }
