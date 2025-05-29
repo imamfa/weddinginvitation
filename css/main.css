@@ -472,9 +472,9 @@ body>.elementor {
 }
 
 /* 2) Kalau layar lebih besar dari 480px, kunci ke 480px dan center */
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   .site-container {
-    max-width: 480px;
+    max-width: 768px;
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
@@ -482,9 +482,9 @@ body>.elementor {
 }
 
 /* 3) Pastikan html/body juga nggak melebihi saat besar */
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   html, body {
-    max-width: 480px;
+    max-width: 768px;
     margin: 0 auto;
     overflow-x: hidden;
   }
