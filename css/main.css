@@ -511,3 +511,15 @@ body>.elementor {
     background-size: auto 100%;
   }
 }
+/* ================================
+   Instant override: semua box tetap rounded & transparan
+   di layar ≥768px
+   ================================ */
+@media (min-width: 768px) {
+  /* target semua widget-text-editor box dan section wrapper */
+  .elementor-section .elementor-widget-container > div,
+  .elementor-widget-text-editor .elementor-widget-container > div {
+    background: rgba(255,255,255,0.8) !important;
+    border-radius: 12px !important;
+  }
+}
