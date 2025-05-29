@@ -490,40 +490,48 @@ body>.elementor {
   }
 }
 
-/* 1) Untuk layar >480px: kunci konten di kiri & pasang bg-image di kanan */
-@media (min-width: 481px) {
-  /* container tetap 480px dan float kiri */
-  .site-container {
-    float: right;
-    width: 480px;
-    margin: 0;
-  }
-
-  /* background full-height di sisi kanan */
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    min-height: 100vh;
-    /* atur bg di kanan */
-    background: url('images/cover.webp') no-repeat left center fixed;
-    /* agar bg cover sumbu vertikal */
-    background-size: auto 100%;
-  }
-}
-
-/* ================================ 
-   Instant override: paksa background
-   section Wedding tampil di ≥768px
-   ================================ */
+/* =====================================================
+   Force everything ≥768px to use the same rules as ≤768px
+   (override all desktop-specific widths, max-widths, floats)
+   ===================================================== */
 @media (min-width: 768px) {
-  /* Target section-nya berdasarkan id="wedding" */
-  #wedding > .elementor-background-overlay {
-    /* ganti URL ini dengan background aslimu */
-    background: url('images/event.webp') center/cover no-repeat !important;
-    /* jika perlu warna saja: 
-       background-color: rgba(255,255,255,0.9) !important;
-    */
-    opacity: 1 !important;      /* pastikan overlay tidak transparan penuh */
+  /* Reset container sizing */
+  html, body {
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+  /* If you have a site wrapper */
+  .site-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+  /* Reset Elementor section/column/grid widths */
+  .elementor-section,
+  .elementor-container,
+  .elementor-row,
+  .elementor-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+  /* Ensure widgets fill full width */
+  .elementor-widget,
+  .elementor-widget-container > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  /* Remove any desktop-only background removals */
+  .elementor-section .elementor-background-overlay,
+  .elementor-section .elementor-widget-container > div {
+    background: inherit !important;
+    border-radius: inherit !important;
   }
 }
