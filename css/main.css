@@ -506,7 +506,7 @@ body>.elementor {
     overflow-x: hidden;
     min-height: 100vh;
     /* atur bg di kanan */
-    background: url('images/cover') no-repeat left center fixed;
+    background: url('images/cover.webp') no-repeat left center fixed;
     /* agar bg cover sumbu vertikal */
     background-size: auto 100%;
   }
