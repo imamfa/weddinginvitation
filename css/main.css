@@ -494,7 +494,7 @@ body>.elementor {
 @media (min-width: 481px) {
   /* container tetap 480px dan float kiri */
   .site-container {
-    float: left;
+    float: right;
     width: 480px;
     margin: 0;
   }
@@ -506,7 +506,7 @@ body>.elementor {
     overflow-x: hidden;
     min-height: 100vh;
     /* atur bg di kanan */
-    background: url('imagegs/cover') no-repeat right center fixed;
+    background: url('images/cover') no-repeat left center fixed;
     /* agar bg cover sumbu vertikal */
     background-size: auto 100%;
   }
