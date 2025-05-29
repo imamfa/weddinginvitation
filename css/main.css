@@ -489,28 +489,3 @@ body>.elementor {
     overflow-x: hidden;
   }
 }
-/* =====================================================
-   Lock ke 480px di kanan, isi kiri dengan background
-   untuk layar >480px
-   ===================================================== */
-@media (min-width: 481px) {
-  /* 1) Container tetap 480px, tapi float ke kanan */
-  .site-container {
-    float: right !important;
-    width: 480px !important;
-    max-width: 480px !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 2) Background di sisi kiri */
-  html, body {
-    margin: 0; padding: 0;
-    overflow-x: hidden;
-    min-height: 100vh;
-    background: url('/images/cover.webp')
-                no-repeat left center fixed !important;
-    /* agar tinggi background sesuai viewport */
-    background-size: auto 100% !important;
-  }
-}
