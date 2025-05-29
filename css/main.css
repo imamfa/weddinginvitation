@@ -489,3 +489,25 @@ body>.elementor {
     overflow-x: hidden;
   }
 }
+
+/* 1) Untuk layar >480px: kunci konten di kiri & pasang bg-image di kanan */
+@media (min-width: 481px) {
+  /* container tetap 480px dan float kiri */
+  .site-container {
+    float: left;
+    width: 480px;
+    margin: 0;
+  }
+
+  /* background full-height di sisi kanan */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* atur bg di kanan */
+    background: url('imagegs/cover') no-repeat right center fixed;
+    /* agar bg cover sumbu vertikal */
+    background-size: auto 100%;
+  }
+}
