@@ -2622,7 +2622,7 @@ body .elementor-53545 .elementor-element.elementor-element-496e160 .elementor-la
 
 .elementor-53545 .elementor-element.elementor-element-6f0a830:not(.elementor-motion-effects-element-type-background),
 .elementor-53545 .elementor-element.elementor-element-6f0a830>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url(../images/event.webp)
+    background-image: url(../images/event.webp);
     background-position: center center;
     background-size: cover
 }
@@ -2796,7 +2796,7 @@ body:not(.rtl) .elementor-53545 .elementor-element.elementor-element-d0d19b1 .el
 
 .elementor-53545 .elementor-element.elementor-element-c56e38f:not(.elementor-motion-effects-element-type-background),
 .elementor-53545 .elementor-element.elementor-element-c56e38f>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url(../images/6.webp);
+    background-image: url(../images/cover.webp);
     background-size: cover
 }
 
