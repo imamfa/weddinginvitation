@@ -452,14 +452,15 @@ body>.elementor {
   }
     html, body, .elementor {
     height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
   }
 
-  /* Lebih spesifik: top-section langsung */
+  /* Override default snap-align: start; */
   section.elementor-top-section {
     scroll-snap-align: end !important;
-    /* scroll-snap-stop: always; */  /* kalau mau paksa berhenti full di setiap section */
   }
 }
 
@@ -472,13 +473,14 @@ body>.elementor {
   }
     html, body, .elementor {
     height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
   }
 
-  /* Lebih spesifik: top-section langsung */
+  /* Override default snap-align: start; */
   section.elementor-top-section {
     scroll-snap-align: end !important;
-    /* scroll-snap-stop: always; */  /* kalau mau paksa berhenti full di setiap section */
   }
 }
