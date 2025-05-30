@@ -460,3 +460,8 @@ body>.elementor {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
 }
+
+.elementor-section[data-id="96e4f2b"] .elementor-button-wrapper, /* ganti d35b9e0 dengan data-id Groom */
+.elementor-section[data-id="2f668e7"] .elementor-button-wrapper { /* ganti XXXXXXX dengan data-id Bride */
+  margin-bottom: 0.5rem !important;
+}
