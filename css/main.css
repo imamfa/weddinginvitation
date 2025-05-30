@@ -450,14 +450,6 @@ body>.elementor {
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
-    html, body, .elementor {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-  }
-
   /* Override default snap-align: start; */
   section.elementor-top-section {
     scroll-snap-align: end !important;
@@ -471,14 +463,6 @@ body>.elementor {
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
-    html, body, .elementor {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-  }
-
   /* Override default snap-align: start; */
   section.elementor-top-section {
     scroll-snap-align: end !important;
