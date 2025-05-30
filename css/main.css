@@ -448,7 +448,7 @@ body>.elementor {
         column-count: 2
     }
     .info_modalx {
-    margin-top: -47px;   /* negatif = naik, posisitif = turunkan */
+    margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
 }
 
@@ -457,6 +457,6 @@ body>.elementor {
         column-count: 2
     }
     .info_modalx {
-    margin-top: -47px;   /* negatif = naik, posisitif = turunkan */
+    margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
 }
