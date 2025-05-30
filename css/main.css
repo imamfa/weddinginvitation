@@ -450,8 +450,6 @@ body>.elementor {
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
-  .elementor-section {
-    scroll-snap-align: end;
 }
 
 @media (max-width:480px) {
@@ -461,6 +459,4 @@ body>.elementor {
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
-  .elementor-section {
-    scroll-snap-align: end;
 }
