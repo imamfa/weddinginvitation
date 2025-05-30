@@ -473,7 +473,7 @@ body>.elementor {
 }
 
 .pane--bg {
-  background-image: url('../img/cover.jpg'); /* ganti nama sesuai aset-mu */
+  background-image: url('../images/cover.jpg'); /* ganti nama sesuai aset-mu */
   background-size: cover;
   background-position: center;
 }
