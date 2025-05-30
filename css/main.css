@@ -475,8 +475,6 @@ body>.elementor {
 @media (min-width: 768px) {
   .site-container {
     max-width: 768px;
-    margin-left: 50%;           /* letakkan titik 0 di tengah viewport */
-    transform: translateX(-50%);/* geser kontainer balik setengah lebar-nya */
     box-sizing: border-box !important;
     overflow-x: hidden;
   }
@@ -489,4 +487,26 @@ body>.elementor {
     margin: 0 auto;
     overflow-x: hidden;
   }
+}
+
+
+/* =======================================================
+   Paksa Wedding Event section (6f0a830) selalu pakai event.webp
+   dan hilangkan overlay abu-abu, di semua viewport
+   ======================================================= */
+.elementor-53545 .elementor-element.elementor-element-6f0a830
+  :not(.elementor-motion-effects-element-type-background),
+.elementor-53545 .elementor-element.elementor-element-6f0a830
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url('../images/event.webp') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+/* Hilangkan overlay abu-abu */
+.elementor-53545 .elementor-element.elementor-element-6f0a830
+  > .elementor-background-overlay {
+  background-color: transparent !important;
+  opacity: 1 !important;
 }
