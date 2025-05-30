@@ -450,6 +450,17 @@ body>.elementor {
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
+    html, body, .elementor {
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  /* Lebih spesifik: top-section langsung */
+  section.elementor-top-section {
+    scroll-snap-align: end !important;
+    /* scroll-snap-stop: always; */  /* kalau mau paksa berhenti full di setiap section */
+  }
 }
 
 @media (max-width:480px) {
@@ -458,5 +469,16 @@ body>.elementor {
     }
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
+  }
+    html, body, .elementor {
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  /* Lebih spesifik: top-section langsung */
+  section.elementor-top-section {
+    scroll-snap-align: end !important;
+    /* scroll-snap-stop: always; */  /* kalau mau paksa berhenti full di setiap section */
   }
 }
