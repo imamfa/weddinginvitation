@@ -339,7 +339,7 @@ body>.elementor {
 
 .elementor-section {
     scroll-snap-align: start;
-    height: 100vh !important
+    min-height: 100vh !important;
 }
 
 .content-modalx,
@@ -452,7 +452,9 @@ body>.elementor {
   }
   /* Override default snap-align: start; */
   section.elementor-top-section {
-    scroll-snap-align: end !important;
+    height: auto !important;               /* batalkan 100vh */
+    min-height: 100vh !important;          /* kalau tetap butuh minimal tinggi layar */
+    scroll-snap-align: end !important;     /* snap ke bawah */
   }
 }
 
@@ -465,6 +467,8 @@ body>.elementor {
   }
   /* Override default snap-align: start; */
   section.elementor-top-section {
-    scroll-snap-align: end !important;
+    height: auto !important;               /* batalkan 100vh */
+    min-height: 100vh !important;          /* kalau tetap butuh minimal tinggi layar */
+    scroll-snap-align: end !important;     /* snap ke bawah */  
   }
 }
