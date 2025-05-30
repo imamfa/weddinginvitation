@@ -460,3 +460,12 @@ body>.elementor {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
 }
+
+#bride .elementor-widget-container {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+#groom .elementor-widget-container {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
