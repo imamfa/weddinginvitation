@@ -473,9 +473,12 @@ body>.elementor {
 
 /* 2) Kalau layar lebih besar dari 480px, kunci ke 480px dan center */
 @media (min-width: 768px) {
+  body {                      /* atau .wrapper */
+    display: flex;
+    justify-content: center;  /* center horizontal */
+  }
   .site-container {
     max-width: 768px;
-    margin-left: 50vh;
     box-sizing: border-box !important;
     overflow-x: hidden;
   }
