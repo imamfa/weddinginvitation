@@ -462,14 +462,3 @@ body>.elementor {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
 }
-
-/* css/desktop-bg-fix.css */
-@media (min-width: 768px) {
-  /* Target semua layer yang membawa background-image */
-  .elementor-53545 .elementor-motion-effects-layer,
-  .elementor-53545 .elementor-background-slideshow__slide__image,
-  .elementor-53545 .elementor-background-video {
-    /* Fokus muka ke atas */
-    background-position: center top !important;
-  }
-}
