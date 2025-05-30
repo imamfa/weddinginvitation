@@ -475,9 +475,7 @@ body>.elementor {
 @media (min-width: 768px) {
   .site-container {
     max-width: 768px;
-    /*margin-left: auto;
-    margin-right: auto;*/
-    margin: 0 auto !important;    /* center horisontal */
+    margin-left: 35vh;
     box-sizing: border-box !important;
     overflow-x: hidden;
   }
