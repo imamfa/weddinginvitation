@@ -657,20 +657,6 @@
                 });
             });
         </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Hanya di Android/iOS
-                if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
-                    document.querySelectorAll('.elementor-section').forEach(section => {
-                        section.addEventListener('wheel', e => {
-                            // agar e.preventDefault() dipanggil
-                            e.preventDefault();
-                            section.scrollIntoView({ behavior: 'smooth', block: 'end' });
-                        }, { passive: false });
-                    });
-                }
-            });
-        </script>
 
 </body>
 
