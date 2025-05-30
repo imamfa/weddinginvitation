@@ -339,7 +339,7 @@ body>.elementor {
 
 .elementor-section {
     scroll-snap-align: start;
-    min-height: 100vh !important;
+    height: 100vh !important;
 }
 
 .content-modalx,
@@ -450,12 +450,6 @@ body>.elementor {
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
   }
-  /* Override default snap-align: start; */
-  section.elementor-top-section {
-    height: auto !important;               /* batalkan 100vh */
-    min-height: 100vh !important;          /* kalau tetap butuh minimal tinggi layar */
-    scroll-snap-align: end !important;     /* snap ke bawah */
-  }
 }
 
 @media (max-width:480px) {
@@ -464,11 +458,5 @@ body>.elementor {
     }
     .info_modalx {
     margin-top: -50px;   /* negatif = naik, posisitif = turunkan */
-  }
-  /* Override default snap-align: start; */
-  section.elementor-top-section {
-    height: auto !important;               /* batalkan 100vh */
-    min-height: 100vh !important;          /* kalau tetap butuh minimal tinggi layar */
-    scroll-snap-align: end !important;     /* snap ke bawah */  
   }
 }
