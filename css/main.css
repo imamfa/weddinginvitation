@@ -491,3 +491,20 @@ body>.elementor {
     overflow-x: hidden;
   }
 }
+
+/* ==================================================
+   Override: kembalikan border-radius untuk desktop
+   ================================================== */
+@media (min-width: 768px) {
+  /* Terapkan rounding 12px di semua e-con container */
+  .e-con {
+    --border-radius: 12px !important;
+  }
+  /* Jika ada elemen custom yang perlu ditegakkan juga */
+  .elementor-background-overlay,
+  .elementor-background-slideshow,
+  .elementor-background-video-container {
+    border-radius: 12px !important;
+  }
+}
+
