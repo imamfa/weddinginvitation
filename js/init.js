@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){let e=document.getElementById("playMusic");e&&e.addEventListener("click",function(){document.getElementById("song")?.play()})}),document.addEventListener("DOMContentLoaded",function(){"function"==typeof Eg&&new Eg(".e-gallery",{thumbnail:!0,lightbox:!0})});

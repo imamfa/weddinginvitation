@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Tambahkan script ini agar var(--vh) langsung ter‐set sesuai window.innerHeight -->
+    <script>
+    function updateVhVariable() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    window.addEventListener('load', updateVhVariable);
+    window.addEventListener('resize', updateVhVariable);
+    </script>
+    
+    <meta name="robots" content="noindex, nofollow">
+    <!-- SEO -->
+    <title>The Wedding of Imam & Febrina</title>
+    <meta name="description" content="Wedding Invitation">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="Invitation">
+    <meta property="og:title" content="The Wedding of Imam & Febrina">
+    <meta property="og:description" content="The Wedding of Imam & Febrina">
+    <meta property="og:url" content="https://imamfebi.com">
+    <meta property="og:site_name" content="The Wedding of Imam & Febrina">
+    <meta property="article:modified_time" content="2025-05-21T06:40:23+00:00">
+    <meta property="og:image" content="../images/cover.webp">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:type" content="image/webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:label1" content="Est. reading time">
+    <meta name="twitter:data1" content="3 minutes">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/elementor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.x.x/css/all.min.css">
+
+    <!-- JS -->
+    <script src="js/init.js" defer></script>
+    <script src="js/jquery.min.js" id="jquery-core-js"></script>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="generator" content="Elementor 3.28.4; features: additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-auto">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class="wp-singular page-template page-template-elementor_canvas page page-id-53545 wp-embed-responsive wp-theme-hello-elementor metaslider-plugin theplus-preloader hello-elementor-default elementor-default elementor-template-canvas elementor-kit-5 elementor-page elementor-page-53545">
+    <div data-elementor-type="wp-page" data-elementor-id="53545" class="elementor elementor-53545" data-elementor-settings="{" scroll_snap ":"yes "}"="" data-elementor-post-type="page">
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-13ce07f elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="13ce07f" data-element_type="section"
+        id="header" data-settings="{" background_background ":"classic "}"="">
+            <div class="elementor-background-overlay"></div>
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1742b59" data-id="1742b59" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-03a572a elementor-widget elementor-widget-weddingpress-wellcome" data-id="03a572a" data-element_type="widget" data-widget_type="weddingpress-wellcome.default">
+                            <div class="elementor-widget-container">
+                                <div class="modalx" data-sampul="">
+                                    <div class="overlayy"></div>
+                                    <div class="content-modalx">
+                                        <div class="info_modalx">
+                                            <div class="elementor-image img"></div>
+                                            <div class="wdp-txt-the-wedding" style="width:auto !important">The Wedding Of </div>
+                                            <div class="wdp-mempelai" style="width: auto !important;">Imam & Febrina</div>
+                                            <div class="wdp-dear" style="width: auto !important;">Kepada Yth:</div>
+                                            <div class="wdp-name namatamu" style="width: auto !important;">Tamu Undangan</div>
+                                            <div class="wdp-button-wrapper" id="wdp-button-wrapper">
+                                                <button class="elementor-button"> Open Invitation </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var sampulbg = jQuery('.modalx').data('sampul');
+                                    jQuery('.modalx').attr('style', 'background-image: url(' + sampulbg + ') !important;');
+                                    jQuery('body').css('overflow', 'hidden');
+                                    jQuery('.wdp-button-wrapper button').on('click', function() {
+                                      jQuery('.modalx').addClass('removeModals');
+                                      jQuery('body').css('overflow', 'auto');
+                                    });
+                                </script>
+                                <script>
+                                    //var z = document.querySelector('#wdp-button-wrapper');
+                                    //z.addEventListener("click", function(event) {
+                                    //Neo - Added New Conditional Statement for select Audio or Youtube
+                                    var isYT = false;
+                                    jQuery("#wdp-button-wrapper").on("click", "button", function() {
+                                      // var isYT = false;
+                                      playAudio();
+                                      if (document.body.contains(document.getElementById("song"))) {
+                                        document.getElementById("song").play();
+                                        isYT = false;
+                                      } else {
+                                        isYT = true;
+                                        player.playVideo();
+                                      }
+                
+                                      function playAudio() {
+                                        var isYT = false;
+                                        if (document.body.contains(document.getElementById("song"))) {
+                                          document.getElementById("song").play();
+                                          isYT = false;
+                                        } else {
+                                          isYT = true;
+                                          player.playVideo();
+                                        }
+                                      }
+                                    });
+                                </script>
+                                <script>
+                                    // decode & and \'
+                                    if (jQuery('.namatamu').length >= 1) {
+                                      let tmpHtmlNamatamu = document.querySelectorAll('.namatamu')
+                                      tmpHtmlNamatamu.forEach((tamuTexts) => {
+                                        tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
+                                      });
+                                    }
+                
+                                    function cleanIts(str) {
+                                      let cleanedStr = str.replace(/\\/g, "");
+                                      return jQuery(" <textarea> </textarea>").html(cleanedStr).text();
+                                      }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-51d7683 wdp-sticky-section-positon--bottom elementor-view-default elementor-widget elementor-widget-weddingpress-audio" data-id="51d7683" data-element_type="widget" data-settings="{" loop ":"yes "}"="" data-widget_type="weddingpress-audio.default">
+                            <div class="elementor-widget-container">
+                                <script>
+                                    var settingAutoplay = 'yes';
+                                    window.settingAutoplay = settingAutoplay === 'disable' ? false : true;
+                                </script>
+                                <div id="audio-container" class="audio-box">
+                                    <audio id="song" loop autoplay>
+                                        <source src="/audio/song.mp3" type="audio/mp3">
+                                    </audio>
+                                    <div class="elementor-icon-wrapper" id="unmute-sound" style="display: none;">
+                                        <div class="elementor-icon">
+                                            <i aria-hidden="true" class="fas fa-microphone"></i>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-icon-wrapper" id="mute-sound" style="display: none;">
+                                        <div class="elementor-icon">
+                                            <i aria-hidden="true" class="fas fa-microphone-slash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- audio control -->
+                                <script src="js/audio-control.js"></script>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-dd58d15 elementor-widget elementor-widget-heading" data-id="dd58d15" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Imam & Febrina</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-3b95096 elementor-widget elementor-widget-text-editor" data-id="3b95096" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <p>
+                                    <em>“Two souls don't find each other by accident, they cross paths. When the time is right, not a moment too soon, not a moment too late. It was naseeb - destined long before they knew what it meant to belong to someone.”</em>
+                                </p>
+                                <p>Abbas Amiri: Naseeb</p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-dcede4c elementor-widget elementor-widget-heading" data-id="dcede4c" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">29.06.2025</h2>
+                                <br>
+                            </div>
+                            <!--
+                            <div class="calendar-btn-wrapper">
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Pernikahan%20Imam%20dan%20Febi+&amp;+Resepsi&dates=20250629T110000Z/20250629T140000Z&location=Aula+Rinjani+Waterpark,+Selong,+Lombok" class="elementor-button elementor-button-link elementor-size-sm calendar-google-btn"
+                                target="_blank" rel="noopener">
+                                    <i class="fa fa-calendar-plus"></i>
+                                    <span>Add to Google Calendar</span>
+                                </a>
+                            -->    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-d35b9e0 elementor-section-height-min-height elementor-section-items-bottom elementor-section-content-middle elementor-section-boxed elementor-section-height-default"
+        data-id="d35b9e0" data-element_type="section" id="groom" data-settings="{" background_background ":"classic "}"="">
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bce6271" data-id="bce6271" data-element_type="column" data-settings="{" background_background ":"classic "}"="">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-element elementor-element-60f1991 elementor-widget elementor-widget-heading" data-id="60f1991" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">The Groom</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-b16734d elementor-widget elementor-widget-heading" data-id="b16734d" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Imam Fahrurrozi</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-78c6975 elementor-widget elementor-widget-text-editor" data-id="78c6975" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <p>
+                                    <strong>Putra dari:</strong>
+                                    <br> Bapak Mohammad Aminullah & Ibu Misnun
+                                </p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-96e4f2b elementor-align-left elementor-widget elementor-widget-button" data-id="96e4f2b" data-element_type="widget" data-widget_type="button.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-button-wrapper">
+                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-icon">
+                                                <i aria-hidden="true" class="fab fa-instagram"></i>
+                                            </span>
+                                            <span class="elementor-button-text">imamfrrr
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-88d28f0 elementor-section-height-min-height elementor-section-items-bottom elementor-section-content-bottom elementor-section-boxed elementor-section-height-default"
+        data-id="88d28f0" data-element_type="section" id="bride" data-settings="{" background_background ":"classic "}"="">
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0a3a64e" data-id="0a3a64e" data-element_type="column" data-settings="{" background_background ":"classic "}"="">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-element elementor-element-074255f elementor-widget elementor-widget-heading" data-id="074255f" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">The Bride</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-0c81e40 elementor-widget elementor-widget-heading" data-id="0c81e40" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Febrina Rizki Karnia</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-1d49b22 elementor-widget elementor-widget-text-editor" data-id="1d49b22" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <p>
+                                    <strong>Putri dari:</strong>
+                                    <br>Bapak Sukardi & Ibu Ahyani Mardiah
+                                </p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-2f668e7 elementor-align-left elementor-widget elementor-widget-button" data-id="2f668e7" data-element_type="widget" data-widget_type="button.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-button-wrapper">
+                                    <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-icon">
+                                                <i aria-hidden="true" class="fab fa-instagram"></i>
+                                            </span>
+                                            <span class="elementor-button-text">frkarnia
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-6f0a830 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="6f0a830" data-element_type="section"
+        id="wedding" data-settings="{" background_background ":"classic "}"="">
+            <div class="elementor-background-overlay"></div>
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f47fafa" data-id="f47fafa" data-element_type="column" data-settings="{" background_background ":"classic "}"="">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-element elementor-element-9151460 elementor-widget elementor-widget-heading" data-id="9151460" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Wedding Event</h2>
+                            </div>
+                        </div>
+                        <section class="elementor-inner-section elementor-element elementor-element-4f0afb5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4f0afb5" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-8e5f586" data-id="8e5f586" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-cdd58b2 elementor-widget elementor-widget-heading" data-id="cdd58b2" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Akad</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-d3e811e elementor-widget elementor-widget-heading" data-id="d3e811e" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Sabtu, 29 Juni 2025</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-d7674c4 elementor-widget elementor-widget-heading" data-id="d7674c4" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">08.00 - 10.30 WITA</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-401c64a elementor-widget elementor-widget-text-editor" data-id="401c64a" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <p class="event-location">
+                                                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                                    <strong>&nbsp;Aula Rinjani Waterpark</strong>
+                                                    <br>
+                                                    <span>&nbsp;&nbsp;Selong, Lombok Timur</span>
+                                                </p>
+                                            </div>
+                                            <div class="elementor-element elementor-element-5eb19ba elementor-mobile-align-right elementor-widget elementor-widget-button" data-id="5eb19ba" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="https://maps.app.goo.gl/DTfdgZFUXWZtSrgs5" target="_blank" rel="noopener">
+                                                            <span class="elementor-button-content-wrapper">
+                                                            <span class="elementor-button-icon">
+                                                                <i class="fa fa-map-signs" aria-hidden="true"></i>
+                                                            </span>
+                                                            <span class="elementor-button-text">Maps</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3d1f3b8" data-id="3d1f3b8" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-fc129f5 elementor-widget elementor-widget-heading" data-id="fc129f5" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Resepsi</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-25836fc elementor-widget elementor-widget-heading" data-id="25836fc" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Sabtu, 29 Juni 2025</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-00aca3b elementor-widget elementor-widget-heading" data-id="00aca3b" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">10.30 - 13.00 WITA</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-dc18a5f elementor-widget elementor-widget-text-editor" data-id="dc18a5f" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <p class="event-location">
+                                                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                                    <strong>&nbsp;Aula Rinjani Waterpark</strong>
+                                                    <br>
+                                                    <span>&nbsp;&nbsp;Selong, Lombok Timur</span>
+                                                </p>
+                                            </div>
+                                            <div class="elementor-element elementor-element-5eb19ba elementor-mobile-align-right elementor-widget elementor-widget-button" data-id="5eb19ba" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="https://maps.app.goo.gl/DTfdgZFUXWZtSrgs5" target="_blank" rel="noopener">
+                                                            <span class="elementor-button-content-wrapper">
+                                                            <span class="elementor-button-icon">
+                                                                <i class="fa fa-map-signs" aria-hidden="true"></i>
+                                                            </span>
+                                                            <span class="elementor-button-text">Maps</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-6422eba elementor-section-height-min-height elementor-section-items-bottom elementor-section-boxed elementor-section-height-default" data-id="6422eba" data-element_type="section"
+        id="gift" data-settings="{" background_background ":"classic "}"="">
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67d3107" data-id="67d3107" data-element_type="column" data-settings="{" background_background ":"classic "}"="">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-element elementor-element-0f5e3ec elementor-widget elementor-widget-heading" data-id="0f5e3ec" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default" style="text-align: center;">Wedding Gift</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-ab9f3dd elementor-widget elementor-widget-text-editor" data-id="ab9f3dd" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <p style="text-align: center;">Bagi Keluarga dan Sahabat yang ingin mengirimkan <em>wedding gift</em> secara digital, dapat melalui rekening di bawah ini:</p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-b9cb556 elementor-widget elementor-widget-html" data-id="b9cb556" data-element_type="widget" data-widget_type="html.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-widget-container">
+                                    <div class="container">
+
+
+
+                                        <select id="dropdown" aria-label="Pilih Bank">
+                                            <option value="0760177032" data-atasnama="Imam Fahrurrozi" data-logo="images/BCA.webp" loading="lazy">BANK BCA</option>
+                                            <option value="4145002651" data-atasnama="Febrina Rizki Karnia" data-logo="images/PERMATA.webp" loading="lazy">BANK PERMATA</option>
+                                        </select>
+                                        <button id="copy-btn" onclick="copyDropdown()">Salin</button>
+
+                                        <script>
+                                            function copyDropdown() {
+                                                const dropdown = document.getElementById("dropdown");
+                                                const idx = dropdown.selectedIndex;
+                                                const selectedOption = dropdown.options[idx];
+                                                const selectedValue = selectedOption.value;
+                                                const selectedBank = selectedOption.text;
+                                                const selectedAtas = selectedOption.dataset.atasnama;
+                                                const selectedLogo = selectedOption.dataset.logo;
+                                            
+                                                // Copy ke clipboard
+                                                const tmp = document.createElement("input");
+                                                tmp.value = selectedValue;
+                                                document.body.appendChild(tmp);
+                                                tmp.select();
+                                                document.execCommand("copy");
+                                                document.body.removeChild(tmp);
+                                            
+                                                // Ubah teks tombol sementara
+                                                const copyBtn = document.getElementById("copy-btn");
+                                                const originalText = copyBtn.textContent;
+                                                copyBtn.textContent = "Tersalin!";
+                                                setTimeout(() => {
+                                                  copyBtn.textContent = originalText;
+                                                }, 1000);
+                                            
+                                                // Tampilkan notifikasi custom
+                                                showCustomAlert(selectedBank, selectedAtas, selectedValue, selectedLogo);
+                                              }
+                                            
+                                              function showCustomAlert(bank, nama, norek, logo) {
+                                                const alertBox = document.createElement("div");
+                                                alertBox.style.position = "fixed";
+                                                alertBox.style.top = "20px";
+                                                alertBox.style.left = "50%";
+                                                alertBox.style.transform = "translateX(-50%)";
+                                                alertBox.style.background = "#fff";
+                                                alertBox.style.padding = "12px 16px";
+                                                alertBox.style.border = "1px solid #ccc";
+                                                alertBox.style.borderRadius = "12px";
+                                                alertBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.1)";
+                                                alertBox.style.zIndex = "9999";
+                                                alertBox.style.fontFamily = "sans-serif";
+                                                alertBox.style.textAlign = "center";
+                                                alertBox.style.maxWidth = "235px";
+                                                alertBox.style.width = "90%";
+                                            
+                                                alertBox.innerHTML = `
+                                                  <div style="display: flex; align-items: center; background: #f4f4f4; padding: 8px; border-radius: 8px; margin-bottom: 8px;">
+                                                    <img src="${logo}" alt="${bank}" style="width: 28px; height: 28px; margin-right: 10px;" />
+                                                    <div style="text-align: left;">
+                                                      <div style="font-weight: bold; font-size: 14px;">${norek}</div>
+                                                      <div style="font-size: 13px; color: #444;">a.n ${nama}</div>
+                                                    </div>
+                                                  </div>
+                                                  <div style="font-size: 13px;">Nomor rekening berhasil disalin!</div>
+                                                `;
+                                            
+                                                document.body.appendChild(alertBox);
+                                            
+                                                setTimeout(() => {
+                                                  alertBox.remove();
+                                                }, 3000);
+                                              }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-483bd9f elementor-section-height-min-height elementor-section-content-bottom elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+        data-id="483bd9f" data-element_type="section" data-settings='{"background_background":"classic"}'>
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0951bba" data-id="0951bba" data-element_type="column" data-settings='{"background_background":"classic"}'>
+                    <div id="photo-gallery" class="gallery">
+                        <div class="gallery-item"><img src="images/1compressed.webp" data-full="images/1.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/2compressed.webp" data-full="images/2.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/3compressed.webp" data-full="images/3.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/4compressed.webp" data-full="images/4.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/5compressed.webp" data-full="images/5.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/6compressed.webp" data-full="images/6.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/7compressed.webp" data-full="images/7.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/8compressed.webp" data-full="images/8.webp" alt="Preweding Photo" loading="lazy"></div>
+                        <div class="gallery-item"><img src="images/9compressed.webp" data-full="images/9.webp" alt="Preweding Photo" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal viewer -->
+        <div id="image-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+            <span class="modal-close">&times;</span>
+            <span class="modal-prev">&#10094;</span>
+            <span class="modal-next">&#10095;</span>
+            <img id="modal-img" src="" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);" />
+        </div>
+
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-4633442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" style="scroll-snap-align: start !important; height: auto !important; box-sizing: border-box;"
+        data-id="4633442" data-element_type="section" id="footer" data-settings='{"background_background":"classic"}'>
+            <div class="elementor-background-overlay"></div>
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-737e9c9" data-id="737e9c9" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-22ae994 elementor-widget elementor-widget-heading" data-id="22ae994" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Terima Kasih...</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-f323994 elementor-widget elementor-widget-text-editor" data-id="f323994" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <p>Merupakan sebuah kehormatan bagi Kami jika Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu</p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-ec921e6 elementor-widget elementor-widget-spacer" data-id="ec921e6" data-element_type="widget" data-widget_type="spacer.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-spacer">
+                                    <div class="elementor-spacer-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-custom-made-with-love elementor-widget elementor-widget-text-editor" data-id="made-with-love" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container" style="width: 100%; display: flex; justify-content: center;">
+                                <div style="background: rgba(0, 0, 0, 0.4); padding: 6px 16px; border-radius: 8px; color: white; font-size: 13px; margin-top: 50px;">
+                                    Made with <span style="color: red; font-size: 15px;">❤</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-d23afc1 elementor-widget elementor-widget-html" data-id="d23afc1" data-element_type="widget" data-widget_type="html.default">
+                            <div class="elementor-widget-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <script type="speculationrules">
+            {"prefetch":[ { "source":"document", "where":{ "and":[ {"href_matches":"/*"}, {"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*?(.+)"]}}, {"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},
+            {"not":{"selector_matches":".no-prefetch, .no-prefetch a"}} ] }, "eagerness":"conservative" } ]}
+        </script>
+
+        <script>
+            const lazyloadRunObserver = () => {
+              const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+              const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    let lazyloadBackground = entry.target;
+                    if (lazyloadBackground) {
+                      lazyloadBackground.classList.add('e-lazyloaded');
+                    }
+                    lazyloadBackgroundObserver.unobserve(entry.target);
+                  }
+                });
+              }, {
+                rootMargin: '200px 0px 200px 0px'
+              });
+              lazyloadBackgrounds.forEach((lazyloadBackground) => {
+                lazyloadBackgroundObserver.observe(lazyloadBackground);
+              });
+            };
+            const events = ['DOMContentLoaded', 'elementor/lazyload/observe', ];
+            events.forEach((event) => {
+              document.addEventListener(event, lazyloadRunObserver);
+            });
+        </script>
+        <script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+        <script src="js/core.min.js" id="jquery-ui-core-js"></script>
+        <script src="js/mouse.min.js" id="jquery-ui-mouse-js"></script>
+        <script src="js/slider.min.js" id="jquery-ui-slider-js"></script>
+        <script src="js/draggable.min.js" id="jquery-ui-draggable-js"></script>
+        <script src="js/jquery.ui.touch-punch.js" id="jquery-touch-punch-js"></script>
+        <script src="js/wdp-swiper.min.js" id="wdp-swiper-js-js"></script>
+        <script src="js/qr-code.js" id="weddingpress-qr-js"></script>
+        <script src="js/exad-scripts.min.js" id="exad-main-script-js"></script>
+        <script defer src="js/qr-code-styling.js" id="qr-code-styling-js"></script>
+        <script src="js/jquery.jPages.min.js" id="cui_jPages-js"></script>
+        <script src="js/jquery.textareaCounter.js" id="cui_textCounter-js"></script>
+        <script src="js/jquery.placeholder.min.js" id="cui_placeholder-js"></script>
+        <script src="js/autosize.min.js" id="cui_autosize-js"></script>
+        <script src="js/hooks.min.js" id="wp-hooks-js"></script>
+        <script src="js/i18n.min.js" id="wp-i18n-js"></script>
+        <script id="wp-i18n-js-after">
+            wp.i18n.setLocaleData({
+              'text direction\u0004ltr': ['ltr']
+            });
+        </script>
+        <script src="js/react.min.js" id="react-js"></script>
+        <script src="js/react-dom.min.js" id="react-dom-js"></script>
+        <script src="js/escape-html.min.js" id="wp-escape-html-js"></script>
+        <script src="js/element.min.js" id="wp-element-js"></script>
+        <script src="js/hello-frontend.min.js" id="hello-theme-frontend-js"></script>
+        <script defer src="js/swiper.min.js" id="swiper-js"></script>
+        <!--   <script src="js/e-gallery.min.js" id="elementor-gallery-js"></script> -->
+        <script defer src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
+        <script defer src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+        <script defer src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+        <script defer src="js/e-gallery.min.js" id="elementor-gallery-js"></script>
+        <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
+        <script src="js/bdt-uikit.js" id="bdt-uikit-js"></script>
+        <script src="js/wdp.min.js" id="weddingpress-wdp-js"></script>
+        <script src="js/guest-form.js" id="kirim-kit-js"></script>
+        <script>
+            const galleryImages = document.querySelectorAll('#photo-gallery .gallery-item img');
+              const modal = document.getElementById('image-modal');
+              const modalImg = document.getElementById('modal-img');
+              const closeBtn = document.querySelector('.modal-close');
+              const nextBtn = document.querySelector('.modal-next');
+              const prevBtn = document.querySelector('.modal-prev');
+            
+              let currentIndex = 0;
+            
+              galleryImages.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                  currentIndex = index;
+                  showModal();
+                });
+              });
+            
+              function showModal() {
+                modal.style.display = 'flex';
+                modalImg.src = galleryImages[currentIndex].dataset.full;
+                nextBtn.classList.remove('clicked');
+                prevBtn.classList.remove('clicked');
+              }
+            
+              closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+              });
+            
+              nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % galleryImages.length;
+                showModal();
+                nextBtn.classList.add('clicked');
+                setTimeout(() => nextBtn.classList.remove('clicked'), 150);
+              });
+            
+              prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                showModal();
+                prevBtn.classList.add('clicked');
+                setTimeout(() => prevBtn.classList.remove('clicked'), 150);
+              });
+        </script>
+        <script>
+            // Ambil parameter 'name' dari URL
+            function getParam(name) {
+                const params = new URLSearchParams(window.location.search);
+                return params.get(name);
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                const guest = getParam('to');
+                if (!guest) return;  // kalau nggak ada param, biarkan default
+                // Decoding URL-encoded string (spasi jadi '+', special chars, dll)
+                const decoded = decodeURIComponent(guest.replace(/\+/g, ' '));
+                // Ganti semua elemen dengan class 'namatamu'
+                document.querySelectorAll('.namatamu').forEach(el => {
+                    el.textContent = decoded;
+                });
+            });
+        </script>
+
+</body>
+
+</html>
